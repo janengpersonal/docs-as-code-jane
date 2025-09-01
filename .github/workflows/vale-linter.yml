@@ -2,27 +2,26 @@ name: Vale Lint Checker
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - '*'
+    branches: [ '*' ]
   workflow_dispatch:
 
 jobs:
   prose:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Check out the repository
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      # Step 2: Install Vale via official Action
-      - name: Setup Vale
+      # Official action installs Vale for you
+      - name: Run Vale on Markdown only
         uses: errata-ai/vale-action@v2
         with:
-          version: 3.0.6 # or latest stable
-
-      # Step 3: Run Vale only on Markdown files
-      - name: Run Vale
-        run: vale '**/*.md'
+          # Lint only Markdown/MDX files anywhere in the repo
+          files: |
+            **/*.md
+            **/*.mdx
+        env:
+          # Needed so the action can annotate PRs
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
