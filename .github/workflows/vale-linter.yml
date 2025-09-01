@@ -13,16 +13,16 @@ jobs:
   prose:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Check out the repository code
+      # Step 1: Check out the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Install Vale
-      - name: Install Vale
-        run: |
-          curl -fsSL https://install.goreleaser.com/github.com/errata-ai/vale.sh | sh
-          sudo mv ./bin/vale /usr/local/bin/
+      # Step 2: Install Vale via official Action
+      - name: Setup Vale
+        uses: errata-ai/vale-action@v2
+        with:
+          version: 3.0.6   # or latest stable
 
-      # Step 3: Run Vale on your docs
+      # Step 3: Run Vale
       - name: Run Vale
         run: vale .
