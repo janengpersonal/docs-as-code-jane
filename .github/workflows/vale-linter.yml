@@ -1,0 +1,28 @@
+name: Vale Lint Checker
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  prose:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Install Vale
+      - name: Install Vale
+        run: |
+          curl -fsSL https://install.goreleaser.com/github.com/errata-ai/vale.sh | sh
+          sudo mv ./bin/vale /usr/local/bin/
+
+      # Step 3: Run Vale on your docs
+      - name: Run Vale
+        run: vale .
