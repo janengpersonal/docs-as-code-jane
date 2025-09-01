@@ -21,8 +21,8 @@ jobs:
       - name: Setup Vale
         uses: errata-ai/vale-action@v2
         with:
-          version: 3.0.6   # or latest stable
+          version: 3.0.6 # or latest stable
 
-      # Step 3: Run Vale
+      # Step 3: Run Vale only on Markdown files
       - name: Run Vale
-        run: vale .
+        run: vale '**/*.md'
