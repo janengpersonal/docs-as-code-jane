@@ -1,64 +1,79 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
+import React from 'react';
 import styles from './styles.module.css';
 
-const FeatureList = [
-  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
-
-function Feature({Svg, title, description}) {
+export default function HomepageFeatures() {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+    <div className="container">
+      {/* Diátaxis Framework Section */}
+      <section className={styles.splitContainer}>
+        {/* Left: Text Introduction */}
+        <div className={styles.leftBlock}>
+          <h2>Diátaxis Documentation Framework</h2>
+          <p>
+            I follow the{' '}
+            <a
+              href="https://diataxis.fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Diátaxis framework</strong>
+            </a>{' '}
+            to create technical documentation that supports users at every stage
+            of their journey—from onboarding to offboarding. This approach
+            ensures clear, purposeful content tailored to different learning
+            needs.
+          </p>
+          <ul>
+            <li>
+              <strong>Tutorials:</strong> Step-by-step guides for beginners to
+              learn by doing
+            </li>
+            <li>
+              <strong>How-To Guides:</strong> Practical, goal-oriented
+              instructions for specific tasks
+            </li>
+            <li>
+              <strong>Reference:</strong> Concise, factual technical information
+            </li>
+            <li>
+              <strong>Explanation:</strong> Context, background, and in-depth
+              discussion
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* About Me Section */}
+      <section className={styles.aboutSection}>
+        <div className={styles.aboutContainer}>
+          {/* Left: Text */}
+          <div className={styles.leftBlock}>
+            <h2>Hello / 你好 / Xin chào!</h2>
+            <p>
+              Hi, I'm Thao Nguyen (Jane)—a Technical Writer and Lead UX Writer
+              passionate about writing, product development, and user experience.
+              This portfolio highlights my projects, problem-solving skills, and
+              career aspirations. I'm open to remote or hybrid opportunities
+              globally.
+            </p>
+            <p>
+              Outside of work, I enjoy technology, travel, and yoga. Feel free to
+              connect if we share interests! I am fluent in English, Mandarin,
+              and Vietnamese.
+            </p>
+          </div>
+
+          {/* Right: Image */}
+          <div className={styles.rightBlock}>
+            <img
+              src="/img/jane-profile.jpg"
+              alt="Thao Nguyen (Jane) profile"
+              className={styles.profileImage}
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
 
-export default function HomepageFeatures() {
-  return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
