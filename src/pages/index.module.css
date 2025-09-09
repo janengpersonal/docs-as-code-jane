@@ -1,13 +1,30 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: white; /* make text visible on dark overlay */
+
+  /* Background image */
+  background: url('/img/hero-banner-jane.jpg') center/cover no-repeat;
+}
+
+/* Overlay effect */
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 0;
+}
+
+/* Keep text above the overlay */
+.heroBanner .container {
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (max-width: 996px) {

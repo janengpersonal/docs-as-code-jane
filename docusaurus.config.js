@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: "Jane Thao Nguyen",
   tagline: 'Technical Writer - Content Designer',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-jane.png',
 
   future: { v4: true },
 
@@ -83,7 +83,7 @@ const config = {
       title: "Jane's Documentation",
       logo: {
         alt: "Jane's Logo",
-        src: 'img/logo.svg',
+        src: 'img/favicon-jane.png',
       },
       items: [
         {
@@ -115,8 +115,13 @@ const config = {
           position: 'left',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/janengpersonal',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://www.linkedin.com/in/janethaonguyen22/',
+          label: 'LinkedIn',
           position: 'right',
         },
       ],

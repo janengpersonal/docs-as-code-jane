@@ -66,8 +66,8 @@ export default function HomepageFeatures() {
           {/* Right: Image */}
           <div className={styles.rightBlock}>
             <img
-              src="/img/jane-profile.jpg"
-              alt="Thao Nguyen (Jane) profile"
+              src="/img/jane-profile.jpeg"
+              alt="Jane profile"
               className={styles.profileImage}
             />
           </div>
