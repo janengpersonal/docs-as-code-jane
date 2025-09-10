@@ -14,14 +14,14 @@ This guide explains how to configure restrictions on phone number and OTP inputs
 ## Phone Number Entry Constraints
 
 ### Behavior
-If a client enters an incorrect phone number **A** times within **B** seconds, they will be temporarily locked out for **C** hour(s).   
+If a client enters an incorrect phone number **A** times within **B** seconds, they will be temporarily locked out for **C** hour(s). ![Alt text](photos/otp01.png)  
 
 ### Configuration
 To configure the maximum number of invalid phone number attempts, do as follows:  
 
 1. Sign in to the **Organization Admin portal**.  
 2. Go to **Company Settings > Feature Configurations > Governed channels**.  
-3. Search **"Restrictions on phone number attempts"**.   
+3. Search **"Restrictions on phone number attempts"**. ![Alt text](photos/otp02.png)   
 4. Click **Edit** and choose one of the following:  
    - **Default value**: apply the pre-defined configuration by LeapXpert.  
    - **Custom value** and enter the following values:  
@@ -39,7 +39,7 @@ You have successfully configured the phone number entry constraints.
 ## OTP Input Constraints
 
 ### Behavior
-If a client enters an incorrect OTP **X** times within **Y** seconds, the OTP becomes invalid. The client must then request a new OTP.     
+If a client enters an incorrect OTP **X** times within **Y** seconds, the OTP becomes invalid. The client must then request a new OTP. ![Alt text](photos/otp03.png)    
 
 ### Configuration
 To configure the maximum number of invalid OTP inputs, do as follows:  
@@ -51,7 +51,7 @@ To configure the maximum number of invalid OTP inputs, do as follows:
    - **Default value**: apply the pre-defined configuration by LeapXpert.  
    - **Custom value** and enter the following values:  
      - **X**. Max number of invalid OTPs.  
-     - **Y**. Duration of continuously invalid OTP (second). 
+     - **Y**. Duration of continuously invalid OTP (second). ![Alt text](photos/otp04.png)      
 5. Once done, click **Save**.  
 
 >**Note:** Invalid OTPs include wrong/expired OTPs.  
@@ -63,7 +63,7 @@ You have successfully configured the maximum number of invalid OTP inputs.
 ## OTP Resend Constraints
 
 ### Behavior
-If a client taps **Resend OTP** more than **C** times within **D** minutes, they will be blocked from requesting new OTPs for **E** hour(s). 
+If a client taps **Resend OTP** more than **C** times within **D** minutes, they will be blocked from requesting new OTPs for **E** hour(s). ![Alt text](photos/otp05.png)
 Additionally, there is a daily limit on the total number of OTP resends (**F**).  
 
 ### Configuration
@@ -78,7 +78,7 @@ To configure the maximum number of allowed OTP resend requests, follow these ste
      - **C**. Max number of OTP requests.  
      - **D**. Duration of continuous OTP requests (second).  
      - **E**. Freeze duration (hour).  
-     - **F**. Max number of daily OTP requests. 
+     - **F**. Max number of daily OTP requests. ![Alt text](photos/otp06.png) 
 5. Once finished, click **Save**.  
 
 You have successfully configured the maximum number of allowed OTP resend requests.  
