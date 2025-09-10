@@ -29,7 +29,7 @@ For self-onboarding with Okta using email, and password only, see **Self-Onboard
 ### For AM users
 - Double-check Apple ID details.
 - Set up iCloud for Messages, Keychain and Contacts. For more information, check *Prepare your iPhone and iMessage account: A step-by-step guide*.
-- Use desktop browser for self-onboarding (highly recommended).
+- Use desktop browser for self-onboarding (highly recommended). ![Alt text](photos/imn01.png)
 
 > **Note:** Those practices ensure a frictionless self-onboarding process.
 
@@ -65,35 +65,37 @@ Once the user has successfully linked their iMessage account, you can see the iM
 ## Self-onboarding process (for AM users)
 
 1. Sign in to iMessage with your Apple account.
-2. Once received the email instruction (screenshot), click **Preparations before linking iMessage account** to access a guide for next steps.!
+2. Once received the email instruction (screenshot), click **Preparations before linking iMessage account** to access a guide for next steps.![Alt text](photos/imn02.png)
 3. Once the users have gone through the information on this page, close it and get back to the instruction email.
 4. Click **Link Your iMessage Account** button to get started.
-5. Enter the 6-digit code sent to the above phone number via SMS to verify your phone number.
+5. Enter the 6-digit code sent to the above phone number via SMS to verify your phone number.![Alt text](photos/imn03.png)
 
 >**Note:** From the version 2.3.0 onwards, users can receive OTP via email. To enable sending OTP via email, admins go to `Company Settings > Feature Configurations > Native Channels`. Search for the *"Authentication method for iMessage Native: AM self-onboarding"*, select **Edit**, choose **Send OTP via Email** from the dropdown list. Click **Save**.
 
-1. Select **Log in via SSO** to authenticate your account if your company has enabled SSO authentication. To enable the SSO authentication, see *Enable SSO authentication for iMessage Native self-onboarding* (internal link). 
-2. Enter the Apple ID credentials to your iMessage account. 
-3. After successfully submitting your Apple ID email and password, check your Okta Verify app and **Approve** the login request. 
-4. You will be asked for your Apple device unlock passcode as part of the Apple safety protections. Enter the passcode and complete this process. 
-5.  Wait for a few minutes so that we can complete the setup on LeapXpert archiving device.
-6.  You will be prompted to **Turn on Text Message Forwarding** for LeapXpert archiving device. 
+6. Select **Log in via SSO** to authenticate your account if your company has enabled SSO authentication. To enable the SSO authentication, see *Enable SSO authentication for iMessage Native self-onboarding* (internal link). ![Alt text](photos/imn04.png)
+7. Enter the Apple ID credentials to your iMessage account. ![Alt text](photos/imn05.png)
+8. After successfully submitting your Apple ID email and password, check your Okta Verify app and **Approve** the login request. ![Alt text](photos/imn06.png)
+9. You will be asked for your Apple device unlock passcode as part of the Apple safety protections. Enter the passcode and complete this process. ![Alt text](photos/imn07.png)
+10. Wait for a few minutes so that we can complete the setup on LeapXpert archiving device.
+11. You will be prompted to **Turn on Text Message Forwarding** for LeapXpert archiving device. ![Alt text](photos/imn08.png)
 
 >From LeapXpert version 2.6.0 onwards, the **Complete** button can be disabled in a specified period of time based on the configuration.
 >- To configure this, admins go to `Company Settings > Feature Configurations` > search *"Set countdown timer for the Complete button"*. The acceptable value range is from 0 to 90 (seconds). 
 
+ ![Alt text](photos/imn09.png)
+  ![Alt text](photos/imn10.png)
 
-1.  At this step, on your own device, you encounter the *"Device Added to Your Account"* popup.  
+12. At this step, on your own device, you encounter the *"Device Added to Your Account"* popup.  ![Alt text](photos/imn11.png)
     - This is Apple safety feature when your account is used on other devices. Tap **OK** to dismiss this popup. 
     - If you want to understand more about this Apple mechanism, tap **Settings** to review the list of signed in devices. For more information, see also [*Check your Apple Account device list to find where you're signed in*](https://support.apple.com/en-vn/102649).
 
     >**Note:** Do not remove the LeapXpert archiving machine from the list since it will unlink you from the iMessage Native. You need to integrate again to resume the message archiving.
 
-2.  Below screenshots will show you how to enable **Text Message Forwarding** for LeapXpert capturing device from your iPhone:  
+13. Below screenshots will show you how to enable **Text Message Forwarding** for LeapXpert capturing device from your iPhone:  ![Alt text](photos/imn12.png)
     > **Note:** If you're not seeing Text Message Forwarding option, try turning off the iMessage toggle and then turning it back on again. Wait for a few seconds for Apple to reactivate iMessage, and the Text Message Forwarding option should appear.
 
-3.  Apple will ask for a 6-digit code to confirm this action: 
-- In less than a minute, you will see the code on the self-onboarding webpage as following. 
+14. Apple will ask for a 6-digit code to confirm this action: ![Alt text](photos/imn13.png)
+- In less than a minute, you will see the code on the self-onboarding webpage as following. ![Alt text](photos/imn14.png)
 - As soon as you see the code, enter it on your iPhone and tap **Allow** to complete this action.
 - It may take you a few minutes to see the code. If you don't see the code after 1 minute, tap **Cancel** on your iPhone and try to enable Text Message Forwarding again.
 
@@ -110,7 +112,7 @@ To unlink the corporate phone number for iMessage users, do as follows:
 1. Sign in to the Organization Admin portal.
 2. Go to **Channels > Corporate Phone Number**.
 3. Click **View integrations** at the corporate phone number you want to unlink iMessage Native integration.
-4. The *Corporate Phone Number Integration* dialog opens, click **Unlink**. 
+4. The *Corporate Phone Number Integration* dialog opens, click **Unlink**. ![Alt text](photos/imn15.png)
 5. The *Unlink iOS SMS and iMessage native* dialog opens, click **Unlink** to confirm the deactivating process.
 
 From LeapXpert version 2.1.0 onwards, you can unlink iMessage in two ways:
@@ -124,7 +126,7 @@ Upon receiving the unlink request, the system will proceed to perform the unlink
 From User's iPhone:
 - Open **Settings > Apple ID**.
 - Scroll down to the bottom of Apple ID settings, and select LeapXpert capturing device.
-- Tap **Remove from Account** to remove LeapXpert capturing device from the Apple ID account. 
+- Tap **Remove from Account** to remove LeapXpert capturing device from the Apple ID account. ![Alt text](photos/imn16.png)
 
 From version 2.4.0 onwards, the system will automatically conduct the clean up process. For other versions, you need to submit a ticket for the LeapXpert team to wipe data on the capturing device.
 
