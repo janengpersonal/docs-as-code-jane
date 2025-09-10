@@ -2,7 +2,7 @@
 
 This document describes what external companies are, how they work, and how to manage them in the Organization Admin.
 
-## **What are external companies?**
+## What are external companies?
 --------------------------------
 
 External company (EC) is a method to:
@@ -14,7 +14,7 @@ External company (EC) is a method to:
 *   Ensure data privacy between different client organizations.
     
 
-### **Purpose of EC**
+### Purpose of EC
 
 *   Organize contacts from different companies.
     
@@ -23,7 +23,7 @@ External company (EC) is a method to:
 *   Manage client relationships more effectively.
     
 
-### **Examples**
+### Examples
 
 *   Company A is working with customers from companies B and C.
     
@@ -44,7 +44,7 @@ Note: 
 
 \- Employees can only view and search for clients in the external company they are assigned to, not in others, even the parent, same level or child external companies.
 
-### **Examples**
+### Examples
 
 *   Tech Inc. (Parent EC) includes
     
@@ -55,7 +55,7 @@ Note: 
 *   A US Sales Team member can ONLY see clients in North America Division and CANNOT see clients in Europe division and Tech Inc.
     
 
-## **Create an external company**
+## Create an external company
 ------------------------------
 
 To create an external company, do as follows:
@@ -80,7 +80,7 @@ To create an external company, do as follows:
 
 You have successfully created an external company.
 
-## **Manage external company**
+## Manage external company
 ---------------------------
 
 1.  On the left panel, go to **Company Setting** > **External Company**.
