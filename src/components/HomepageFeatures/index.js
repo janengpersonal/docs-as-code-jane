@@ -66,8 +66,8 @@ export default function HomepageFeatures() {
           {/* Right: Image */}
           <div className={styles.rightBlock}>
             <img
-              src="/img/jane-profile.jpeg"
-              alt="Jane profile"
+              src={require('@site/static/img/jane01.jpg').default}
+              alt="Jane-profile"
               className={styles.profileImage}
             />
           </div>
