@@ -13,17 +13,17 @@ Steps:
 1. Go to **Company Settings > Feature Configurations > select Governed Channels**.  
 2. In the **WeChat MiniApp Governed** section, search for **Client onboarding via SMS**.  
 3. Click **Edit > Custom value > toggle to ON**.  
-   - The Default value is **OFF** (the client onboarding flow with email). ![Alt text](photos/wc-onboarding01.png) 
+   - The Default value is **OFF** (the client onboarding flow with email). 
 
 ---
 
 ## Onboard clients with SMS
 1. Go to **Leap Work web or mobile app**.  
-2. Go to **Contacts**, select **Invite new client**. ![Alt text](photos/wc-onboarding02.png)
-3. In the Invite new client, select **WeChat MiniApp** as the Initial channel.  ![Alt text](photos/wc-onboarding03.png) 
+2. Go to **Contacts**, select **Invite new client**. 
+3. In the Invite new client, select **WeChat MiniApp** as the Initial channel.  
 4. Type the client’s phone number, then click **Continue**.  
-5. For a new profile, enter the client's information and click **Invite**.  ![Alt text](photos/wc-onboarding04.png) 
-   - Select **Use an existing profile** if the client already has a profile on LeapXpert system or **Create a new profile**. ![Alt text](photos/wc-onboarding05.png)  
+5. For a new profile, enter the client's information and click **Invite**.  
+   - Select **Use an existing profile** if the client already has a profile on LeapXpert system or **Create a new profile**.
    - If you choose **Create a new profile**, enter the client’s:  
      - First and Last name  
      - Email  
@@ -31,9 +31,9 @@ Steps:
      - Language  
      - External company  
      - Tags 
-   ![Alt text](photos/wc-onboarding06.png)  
+    
 6. Click **Invite**.  
-7. Go to **Channels** and check the integration status is **Pending**.  ![Alt text](photos/wc-onboarding07.png)    
+7. Go to **Channels** and check the integration status is **Pending**. 
 
 > **Note:**  
 > - The OTP will be sent to client via SMS. Please note that from version 2.6.0 onwards, the OTP can be sent to the client’s email/SMS or both depending on the configuration.  
@@ -46,7 +46,7 @@ Steps:
 **Note:** This enhancement is only available from version 2.6.0 onwards.  
 
 1. Go to **Company Settings > Feature Configurations > select Governed Channels**.  
-2. In the **WeChat MiniApp Governed** section, search for **OTP delivery method (Phone Number FI)**. ![Alt text](photos/wc-onboarding08.png)  
+2. In the **WeChat MiniApp Governed** section, search for **OTP delivery method (Phone Number FI)**.  
 3. Click **Edit > Custom value**.  
 4. Select an option from the dropdown list:  
    - **Both:** OTP is delivered via both Email and SMS.  
