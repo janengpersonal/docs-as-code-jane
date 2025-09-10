@@ -78,7 +78,7 @@ const config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/jane-hero-banner02.jpg',
     navbar: {
       title: "Jane's Documentation",
       logo: {
