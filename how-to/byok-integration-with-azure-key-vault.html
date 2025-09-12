@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-how-to docs-version-current docs-doc-page docs-doc-id-byok-integration-with-azure-key-vault" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Step-by-Step Guide: BYOK Integration with Azure Key Vault | Jane Thao Nguyen</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" property="og:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" property="og:url" content="https://janengpersonal.github.io/docs-as-code-jane/"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="twitter:title" content="Jane Thao Nguyen | Docs-as-Code Portfolio"><meta data-rh="true" name="twitter:description" content="Technical Writer &amp; Content Designer – Documentation, tutorials, and guides."><meta data-rh="true" name="twitter:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-how-to-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-how-to-current"><meta data-rh="true" property="og:title" content="Step-by-Step Guide: BYOK Integration with Azure Key Vault | Jane Thao Nguyen"><meta data-rh="true" name="description" content="The LeapXpert Communications Platform integrates with a customer-managed Azure Key Vault for BYOK (Bring Your Own Key), enabling secure encryption and decryption of sensitive communication data."><meta data-rh="true" property="og:description" content="The LeapXpert Communications Platform integrates with a customer-managed Azure Key Vault for BYOK (Bring Your Own Key), enabling secure encryption and decryption of sensitive communication data."><link data-rh="true" rel="icon" href="/docs-as-code-jane/img/favicon-jane.png"><link data-rh="true" rel="canonical" href="https://janengpersonal.github.io/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault" hreflang="en"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Step-by-Step Guide: BYOK Integration with Azure Key Vault","item":"https://janengpersonal.github.io/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault"}]}</script><link rel="stylesheet" href="/docs-as-code-jane/assets/css/styles.41e53a8f.css">
+<script src="/docs-as-code-jane/assets/js/runtime~main.59f3650c.js" defer="defer"></script>
+<script src="/docs-as-code-jane/assets/js/main.68972885.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/docs-as-code-jane/img/favicon-jane.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs-as-code-jane/"><div class="navbar__logo"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Jane&#x27;s Documentation</b></a><a class="navbar__item navbar__link" href="/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault">How-to</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/tutorial/create-a-scheduled-report">Tutorial</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/explanation/about-external-companies">Explanation</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/reference/list-of-feature-configurations">Reference</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/janengpersonal" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://www.linkedin.com/in/janethaonguyen22/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault">Step-by-Step Guide: BYOK Integration with Azure Key Vault</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/imessage-native-self-onboarding">Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password and Okta Verify Push authentication method)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/we-chat-client-onboarding-with-sms">Configure the client onboarding flow with SMS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/whatsapp-native-bulk-onboarding">Bulk User Onboarding to WhatsApp Native</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/whatsapp-official-account-inbound-flow">Onboard a client profile with a WhatsApp official account pool (inbound flow)</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/docs-as-code-jane/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Step-by-Step Guide: BYOK Integration with Azure Key Vault</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Step-by-Step Guide: BYOK Integration with Azure Key Vault</h1></header>
+<p>The LeapXpert Communications Platform integrates with a customer-managed <strong>Azure Key Vault</strong> for <strong>BYOK (Bring Your Own Key)</strong>, enabling secure encryption and decryption of sensitive communication data.</p>
+<p>This guide provides step-by-step instructions for configuring Azure Key Vault, creating a customer-managed key, and integrating it with LeapXpert.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="before-you-start">Before you start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before you start" title="Direct link to Before you start">​</a></h2>
+<ul>
+<li>Review the BYOK concept and how it works within the LeapXpert platform. See: <strong>Configure Bring Your Own Key (BYOK) protection</strong> (internal link).</li>
+<li>To enable authentication, understand how to generate certificates from the LeapXpert Admin Portal. See: <strong>Generate certificate credential keys for Microsoft Entra ID app registration</strong> (internal link).
+<em>The certificate generation step is required before proceeding.</em></li>
+</ul>
+<blockquote>
+<p><strong>Note</strong><br>
+<!-- -->The certificate generation step is required before proceeding to the configuration section below.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="configure-byok-integration-with-azure-key-vault">Configure BYOK integration with Azure Key Vault<a href="#configure-byok-integration-with-azure-key-vault" class="hash-link" aria-label="Direct link to Configure BYOK integration with Azure Key Vault" title="Direct link to Configure BYOK integration with Azure Key Vault">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-an-app-registration-in-entra-id-2">Create an App Registration in Entra ID (2)<a href="#create-an-app-registration-in-entra-id-2" class="hash-link" aria-label="Direct link to Create an App Registration in Entra ID (2)" title="Direct link to Create an App Registration in Entra ID (2)">​</a></h3>
+<ol>
+<li>Log in to <strong>Microsoft Entra Admin Center</strong>.</li>
+<li>Go to <strong>App registrations</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok-3203c9d1abbaee5e40c20816a9914d54.png" width="1240" height="646" class="img_ev3q"></li>
+<li>Click <strong>+ New registration</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok1-592a4ef6f33eae111144b7c2eed05522.png" width="1240" height="636" class="img_ev3q"></li>
+<li>Fill in:<!-- -->
+<ul>
+<li><strong>Name</strong>: e.g., <code>KeyVaultAccessApp</code></li>
+<li><strong>Supported account types</strong>: <em>Accounts in this organizational directory only</em> (Single tenant)</li>
+<li><strong>Redirect URI</strong>: Leave blank (or set if required by your app)</li>
+</ul>
+</li>
+<li>Click <strong>Register</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok2-1ee8852e137e26a464c9322ebaef0047.png" width="1244" height="696" class="img_ev3q"></li>
+<li>Copy the <strong>Application (Client) ID</strong> and <strong>Directory (Tenant) ID</strong> for later use.<img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok3-21bb4461b061415b2c796c230dcea56a.png" width="1244" height="618" class="img_ev3q"></li>
+<li>Go to <strong>Certificates &amp; secrets</strong> and choose <strong>one</strong> of the following:</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="option-1-authenticate-app-using-certificates">Option 1: Authenticate App using <strong>Certificates</strong><a href="#option-1-authenticate-app-using-certificates" class="hash-link" aria-label="Direct link to option-1-authenticate-app-using-certificates" title="Direct link to option-1-authenticate-app-using-certificates">​</a></h4>
+<ul>
+<li>Under <strong>Certificates</strong>, click <strong>Upload certificate</strong> (or <strong>Update certificate</strong>). <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok4-9f8324b4b64e4e9ba64beb15a6f63c62.png" width="1246" height="622" class="img_ev3q"></li>
+<li>Click <strong>Select file</strong> and upload the certificate downloaded from the <strong>LeapXpert Org Admin portal</strong>.</li>
+<li>(Optional) Enter a description. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok5-66f28c0b8ac321233b7e3085438a3d20.png" width="1244" height="618" class="img_ev3q"></li>
+<li>Click <strong>Add</strong>.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="option-2-authenticate-app-using-client-secrets">Option 2: Authenticate App using <strong>Client secrets</strong><a href="#option-2-authenticate-app-using-client-secrets" class="hash-link" aria-label="Direct link to option-2-authenticate-app-using-client-secrets" title="Direct link to option-2-authenticate-app-using-client-secrets">​</a></h4>
+<ul>
+<li>Go to <strong>Certificates &amp; secrets</strong>.</li>
+<li>Click <strong>Client secrets</strong> &gt; <strong>+ New client secret</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok6-3f53c2a934331f7c993153f13d5d81c1.png" width="1248" height="620" class="img_ev3q"></li>
+<li>Enter a description and select an expiration period. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok7-069ad5ba23b382e268ee65b2d13d8415.png" width="1242" height="624" class="img_ev3q"></li>
+<li>Click <strong>Add</strong>.</li>
+<li>Copy the Value of the secret (you’ll use it for authentication). <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok8-9515160d900d5a5be38758c1b23a72e0.png" width="1244" height="626" class="img_ev3q"></li>
+</ul>
+<blockquote>
+<p><strong>Recommendation</strong><br>
+<!-- -->Use <strong>Option 1 (Certificates)</strong> to authenticate the App Registration.</p>
+</blockquote>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-an-azure-key-vault">Create an Azure Key Vault<a href="#create-an-azure-key-vault" class="hash-link" aria-label="Direct link to Create an Azure Key Vault" title="Direct link to Create an Azure Key Vault">​</a></h3>
+<ol>
+<li>Log in to the <strong>Azure Portal</strong>.</li>
+<li>Select <strong>Key vaults</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok9-09814c7aaa0e4c399066b51b5ea3d48c.png" width="1236" height="644" class="img_ev3q"></li>
+<li>Click <strong>+ Create</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok10-56176e1e1cd9ea73ae9cb6fecc084ba9.png" width="1240" height="642" class="img_ev3q"></li>
+<li>Fill in the required details:<!-- -->
+<ul>
+<li><strong>Subscription</strong>: Choose your subscription.</li>
+<li><strong>Resource Group</strong>: Select or <strong>Create new</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok11-9b887bd8335a801f0d8e61deba4a9726.png" width="1248" height="550" class="img_ev3q"></li>
+<li><strong>Key Vault Name</strong>: e.g., <code>leapvault01</code> (must be globally unique). <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok12-3affbb93893c7604e26b7ee57ec1a67a.png" width="1244" height="628" class="img_ev3q"></li>
+<li><strong>Region</strong>: Select your region.</li>
+</ul>
+</li>
+<li><strong>Enable Soft-delete and Purge Protection</strong>:<!-- -->
+<ul>
+<li><strong>Soft Delete</strong>: Ensure it is enabled. This ensures deleted keys can be recovered within the retention period.</li>
+<li><strong>Retention Period</strong>: 90 days (default).</li>
+<li><strong>Purge Protection</strong>: Enable purge protection to prevent permanent deletion before the retention period ends. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok13-b1f1b0597ea14368730504f3a9c8b0a3.png" width="1152" height="628" class="img_ev3q"></li>
+</ul>
+</li>
+<li>Click <strong>Review + Create</strong>, then <strong>Create</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong><br>
+<!-- -->To prevent data loss, enable soft delete (90-day retention) and purge protection in Azure Key Vault. This ensures customer-managed keys can be recovered if deleted, maintaining secure and uninterrupted access to encrypted data in LeapXpert.</p>
+</blockquote>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-a-custom-role-for-key-vault-operations">Create a custom role for Key Vault operations<a href="#create-a-custom-role-for-key-vault-operations" class="hash-link" aria-label="Direct link to Create a custom role for Key Vault operations" title="Direct link to Create a custom role for Key Vault operations">​</a></h3>
+<ol>
+<li>In the <strong>Azure Portal</strong>, navigate to the <strong>Resource Group</strong> that contains your Key Vault. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok14-ee5eb13c12b17c85c4c87454d2763cc4.png" width="1252" height="608" class="img_ev3q"></li>
+<li>Click <strong>Access control (IAM)</strong>.</li>
+<li>Click <strong>Add</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok15-deda2510af924b244bd37dc1031d9e42.png" width="1252" height="646" class="img_ev3q"></li>
+<li>Click  <strong>Add custom role</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok16-9e2702516177ca04c2b0f73653dd7d80.png" width="1246" height="638" class="img_ev3q"></li>
+<li>Enter a <strong>Custom role name</strong> and select <strong>Start from scratch</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok17-29280cb41f2b475b274e652b226f6c2a.png" width="1248" height="668" class="img_ev3q"></li>
+<li>Open the <strong>Permissions</strong> tab and click <strong>Add permissions</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok18-58e49f5654340af4195c1529a6515f2b.png" width="1242" height="642" class="img_ev3q"></li>
+<li>Search for the following permissions and add them:<!-- -->
+<ul>
+<li><code>Microsoft.KeyVault/vaults/keys/read</code> <em>(Actions)</em> <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok19-2f7378ea024c74035b1aaa3e8ed675b8.png" width="1250" height="642" class="img_ev3q"></li>
+<li>Click <strong>Add</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok20-20130a419f3a30bcc4a9138d3e5f26ff.png" width="1246" height="634" class="img_ev3q"></li>
+<li>Under <strong>Data actions</strong>, repeat the above steps to those permissions:<!-- -->
+<ul>
+<li><code>Microsoft.KeyVault/vaults/keys/read</code></li>
+<li><code>Microsoft.KeyVault/vaults/keys/encrypt/action</code></li>
+<li><code>Microsoft.KeyVault/vaults/keys/decrypt/action</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click <strong>Review + create</strong>, then <strong>Create</strong>.</li>
+</ol>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-role-assignment-to-key-vault">Create role assignment to Key Vault<a href="#create-role-assignment-to-key-vault" class="hash-link" aria-label="Direct link to Create role assignment to Key Vault" title="Direct link to Create role assignment to Key Vault">​</a></h3>
+<ol>
+<li>In your Key Vault, go to <strong>Access control (IAM)</strong>.</li>
+<li>Select <strong>Role assignments</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok21-7a399addda2f765bb603fde92cdfdf0a.png" width="1250" height="656" class="img_ev3q"></li>
+<li>Click <strong>+ Add</strong> &gt; <strong>Add role assignment</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok22-834c5ced6a639a62e970318bf5fae439.png" width="1252" height="650" class="img_ev3q"></li>
+<li>In <strong>Role</strong>, select the <strong>custom role</strong> you created. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok23-0c2bddb588fba6f3af8964cca0fd4f2f.png" width="1242" height="634" class="img_ev3q"></li>
+<li>Click <strong>Next</strong>.</li>
+<li>In the <strong>Members</strong> field, next to <strong>Assign access to</strong>, select <strong>User, group, or service principal</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok24-18c60deead106b6f2ed247d6ef8d234c.png" width="1242" height="640" class="img_ev3q"></li>
+<li>Click <strong>+ Select members</strong> and choose the <strong>App Registration</strong> you created earlier (2). <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok25-6b82a2b89c24be76b69d71d76c16683c.png" width="1252" height="654" class="img_ev3q"></li>
+<li>Click <strong>Select</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok26-9e2d7b803851a5a279cb055b43499387.png" width="1252" height="646" class="img_ev3q"></li>
+<li>Click <strong>Next</strong>.  <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok27-68b97f49c3751a19b7a8bfd30eca509e.png" width="1242" height="636" class="img_ev3q"></li>
+<li>Click <strong>Review + assign</strong>.</li>
+</ol>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-a-key">Create a Key<a href="#create-a-key" class="hash-link" aria-label="Direct link to Create a Key" title="Direct link to Create a Key">​</a></h3>
+<ol>
+<li>In <strong>Azure Portal</strong> &gt; <strong>Key vaults</strong>, select your Key Vault. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok28-c2e1f26599759b3e7779341308f8e9e5.png" width="1238" height="638" class="img_ev3q"></li>
+<li>In the left navigation, go to <strong>Objects</strong> &gt; <strong>Keys</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok29-9452e435b2ad405215fbbd1a301d16b0.png" width="1240" height="636" class="img_ev3q"></li>
+<li>Click <strong>+ Generate/Import</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok30-ee84c15ad3e1799a81409b37072be5df.png" width="1240" height="628" class="img_ev3q"></li>
+<li>Select <strong>Generate</strong> from the dropdown list. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok31-5728cd66c2523a2545fdc0c65a314359.png" width="1236" height="640" class="img_ev3q"></li>
+<li>Enter a <strong>Key name</strong>.  <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok32-5b5cf5a212dc29b0368dfacd713e6a31.png" width="1240" height="634" class="img_ev3q"></li>
+<li>Configure:<!-- -->
+<ul>
+<li><strong>Key type</strong>: <code>RSA</code>.</li>
+<li><strong>Key size</strong>: <code>4096</code> <em>(recommended)</em>.</li>
+<li><strong>Activation/Expiration dates</strong>: Optional.</li>
+</ul>
+</li>
+<li>Click <strong>Create</strong>.</li>
+<li>Copy the <strong>Key Identifier (URI)</strong> in the format:
+<code>https://&lt;key-vault-name&gt;.vault.azure.net/keys/&lt;key-name&gt;/&lt;key-version&gt;</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="configure-in-the-leapxpert-org-admin-portal">Configure in the LeapXpert Org Admin portal<a href="#configure-in-the-leapxpert-org-admin-portal" class="hash-link" aria-label="Direct link to Configure in the LeapXpert Org Admin portal" title="Direct link to Configure in the LeapXpert Org Admin portal">​</a></h3>
+<p><strong>Private Link</strong> is a secure, private connection that keeps your data exchange with LeapXpert entirely within Microsoft’s network (not over the public internet).</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="option-a--without-private-link">Option A — Without Private Link<a href="#option-a--without-private-link" class="hash-link" aria-label="Direct link to Option A — Without Private Link" title="Direct link to Option A — Without Private Link">​</a></h4>
+<p><strong>Summary of required values</strong> (prepare these for configuration in LeapXpert):</p>
+<table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Key Name</td><td><code>&lt;my-encryption-key&gt;</code></td></tr><tr><td>Key Vault URI</td><td><code>https://&lt;key-vault-name&gt;.vault.azure.net</code></td></tr><tr><td>App Registration ID</td><td><code>&lt;Application (Client) ID&gt;</code></td></tr><tr><td>Tenant ID</td><td><code>&lt;Directory (Tenant) ID&gt;</code></td></tr><tr><td>Client Secret</td><td><code>&lt;Client Secret Value&gt;</code> <em>(Optional, if using secret)</em></td></tr></tbody></table>
+<p><strong>Configure in LeapXpert:</strong></p>
+<ol>
+<li>Log in to the <strong>LeapXpert Org Admin portal</strong>.</li>
+<li>Go to <strong>Provisioning &gt; Security &amp; Access &gt; Encryption</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok33-f900cf09bff9f7d7d1b683bef3390d48.png" width="1240" height="640" class="img_ev3q"></li>
+<li>Click <strong>+ Create New Key</strong>.</li>
+<li>In <strong>Create a customer managed key</strong>, enter <strong>Name</strong> and (optional) <strong>Description</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok34-c5cfca2785dea2c946c8da3ce5fbdc31.png" width="1244" height="640" class="img_ev3q"></li>
+<li>Select <strong>Azure Key Vault</strong> and fill in:<!-- -->
+<ul>
+<li><strong>Key name</strong></li>
+<li><strong>Vault URL</strong></li>
+<li><strong>Tenant ID</strong></li>
+<li><strong>Client ID</strong></li>
+<li><strong>Credential type</strong>: <em>Secret</em> or <em>Certificate</em></li>
+</ul>
+</li>
+<li>Click <strong>Create</strong>.</li>
+<li>Click <strong>Enable BYOK</strong> (top right).</li>
+</ol>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="option-b--connect-to-customer-azure-tenant-with-private-link">Option B — Connect to customer Azure tenant with <strong>Private Link</strong><a href="#option-b--connect-to-customer-azure-tenant-with-private-link" class="hash-link" aria-label="Direct link to option-b--connect-to-customer-azure-tenant-with-private-link" title="Direct link to option-b--connect-to-customer-azure-tenant-with-private-link">​</a></h4>
+<ol>
+<li>
+<p>Run the following in <strong>Azure CLI</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">az keyvault list --query &quot;[].{Name:name, ResourceID:id, Subscription:subscriptionId, Region:location}&quot; -o table.</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p>Write down required values from the Azure CLI output or from your Azure Portal, collect the following:</p>
+</li>
+</ol>
+<ul>
+<li><strong>Key Vault Name</strong>: <code>&lt;key-vault-name&gt;</code></li>
+<li><strong>Key Vault Key Name</strong>: <code>&lt;key-name&gt;</code></li>
+<li><strong>Key Vault URI</strong>: <code>https://&lt;key-vault-name&gt;.vault.azure.net/</code></li>
+<li><strong>Resource Path</strong> (long Azure path):<br>
+<code>/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;/providers/Microsoft.KeyVault/vaults/&lt;key-vault-name&gt;</code></li>
+<li><strong>Subscription ID</strong>: <code>&lt;subscription-id&gt;</code></li>
+</ul>
+<ol start="3">
+<li>Collect App Registration details</li>
+</ol>
+<ul>
+<li><strong>Tenant ID</strong></li>
+<li><strong>Application (Client) ID</strong></li>
+<li><strong>Client Secret</strong> <em>(if you’re using a password to connect — optional if using certificate)</em></li>
+</ul>
+<ol start="4">
+<li>Send the information from steps (1) and (2) to <strong>LeapXpert</strong>.<br>
+<!-- -->LeapXpert will use this information to initiate the <strong>Private Link connection</strong>.</li>
+<li>Once LeapXpert finishes the process, log in to your <strong>Azure Portal</strong>.<!-- -->
+<ul>
+<li>Go to your <strong>Key Vault</strong>.</li>
+<li>Under <strong>Settings</strong>, click <strong>Networking</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok35-df2f247ca7d4eb95a68dbcf96cc7c20f.png" width="1238" height="652" class="img_ev3q"></li>
+<li>Choose <strong>Private Endpoint Connections</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok36-fb76ced5a250d2d1898184a3b84e4188.png" width="1236" height="636" class="img_ev3q"></li>
+<li>You will see a <strong>pending request</strong> from LeapXpert.</li>
+<li>Click it and <strong>approve the request</strong>.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong><br>
+<!-- -->Make sure the status becomes <strong>Approved</strong> (both in your Azure Portal and in LeapXpert).</p>
+</blockquote>
+<ol start="6">
+<li>After the link is approved, you will get a few final values to configure on LeapXpert’s Org Admin portal.</li>
+</ol>
+<table><thead><tr><th>Attribute</th><th>Example</th></tr></thead><tbody><tr><td>Key Name</td><td><code>encryption-key-1</code></td></tr><tr><td>Key Vault URL</td><td><code>https://my-keyvault-prod.privatelink.vaultcore.azure.net</code></td></tr><tr><td>App Registration ID</td><td><code>&lt;Application (Client) ID&gt;</code></td></tr><tr><td>Tenant ID</td><td><code>&lt;Directory (Tenant) ID&gt;</code></td></tr><tr><td>Client Secret</td><td><em>(Optional, if you’re using it)</em></td></tr></tbody></table>
+<ol start="7">
+<li>Log in to the <strong>LeapXpert Org Admin portal</strong>.</li>
+<li>Go to <strong>Provisioning &gt; Security &amp; Access &gt; Encryption</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok37-94fe264880ab7883bc506beb10773388.png" width="1240" height="628" class="img_ev3q"></li>
+<li>Click <strong>+ Create New Key</strong>.</li>
+<li>Select <strong>Azure Key Vault</strong> and fill in the values from the table above. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/byok38-502ef1250ce8b4490a09c6d355cc0aa4.png" width="1244" height="636" class="img_ev3q"></li>
+<li>Click <strong>Create</strong>.</li>
+<li>Click <strong>Enable BYOK</strong>.</li>
+</ol>
+<p>✅ You have successfully configured the <strong>BYOK integration with Azure Key Vault</strong>.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--next" href="/docs-as-code-jane/how-to/imessage-native-self-onboarding"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password and Okta Verify Push authentication method)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before you start</a></li><li><a href="#configure-byok-integration-with-azure-key-vault" class="table-of-contents__link toc-highlight">Configure BYOK integration with Azure Key Vault</a><ul><li><a href="#create-an-app-registration-in-entra-id-2" class="table-of-contents__link toc-highlight">Create an App Registration in Entra ID (2)</a></li><li><a href="#create-an-azure-key-vault" class="table-of-contents__link toc-highlight">Create an Azure Key Vault</a></li><li><a href="#create-a-custom-role-for-key-vault-operations" class="table-of-contents__link toc-highlight">Create a custom role for Key Vault operations</a></li><li><a href="#create-role-assignment-to-key-vault" class="table-of-contents__link toc-highlight">Create role assignment to Key Vault</a></li><li><a href="#create-a-key" class="table-of-contents__link toc-highlight">Create a Key</a></li><li><a href="#configure-in-the-leapxpert-org-admin-portal" class="table-of-contents__link toc-highlight">Configure in the LeapXpert Org Admin portal</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Jane's Writing Portfolio. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

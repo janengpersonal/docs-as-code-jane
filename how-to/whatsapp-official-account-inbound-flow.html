@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-how-to docs-version-current docs-doc-page docs-doc-id-whatsapp-official-account-inbound-flow" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Onboard a client profile with a WhatsApp official account pool (inbound flow) | Jane Thao Nguyen</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" property="og:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" property="og:url" content="https://janengpersonal.github.io/docs-as-code-jane/"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="twitter:title" content="Jane Thao Nguyen | Docs-as-Code Portfolio"><meta data-rh="true" name="twitter:description" content="Technical Writer &amp; Content Designer – Documentation, tutorials, and guides."><meta data-rh="true" name="twitter:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-how-to-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-how-to-current"><meta data-rh="true" property="og:title" content="Onboard a client profile with a WhatsApp official account pool (inbound flow) | Jane Thao Nguyen"><meta data-rh="true" name="description" content="From LeapXpert version 2.4.1 onwards, we have supported the MCP mode for client profile onboarding with a WhatsApp official account pool. This flow is different from Onboard a prospect with a WhatsApp official account pool."><meta data-rh="true" property="og:description" content="From LeapXpert version 2.4.1 onwards, we have supported the MCP mode for client profile onboarding with a WhatsApp official account pool. This flow is different from Onboard a prospect with a WhatsApp official account pool."><link data-rh="true" rel="icon" href="/docs-as-code-jane/img/favicon-jane.png"><link data-rh="true" rel="canonical" href="https://janengpersonal.github.io/docs-as-code-jane/how-to/whatsapp-official-account-inbound-flow"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/how-to/whatsapp-official-account-inbound-flow" hreflang="en"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/how-to/whatsapp-official-account-inbound-flow" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Onboard a client profile with a WhatsApp official account pool (inbound flow)","item":"https://janengpersonal.github.io/docs-as-code-jane/how-to/whatsapp-official-account-inbound-flow"}]}</script><link rel="stylesheet" href="/docs-as-code-jane/assets/css/styles.41e53a8f.css">
+<script src="/docs-as-code-jane/assets/js/runtime~main.59f3650c.js" defer="defer"></script>
+<script src="/docs-as-code-jane/assets/js/main.68972885.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/docs-as-code-jane/img/favicon-jane.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs-as-code-jane/"><div class="navbar__logo"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Jane&#x27;s Documentation</b></a><a class="navbar__item navbar__link" href="/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault">How-to</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/tutorial/create-a-scheduled-report">Tutorial</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/explanation/about-external-companies">Explanation</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/reference/list-of-feature-configurations">Reference</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/janengpersonal" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://www.linkedin.com/in/janethaonguyen22/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault">Step-by-Step Guide: BYOK Integration with Azure Key Vault</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/imessage-native-self-onboarding">Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password and Okta Verify Push authentication method)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/we-chat-client-onboarding-with-sms">Configure the client onboarding flow with SMS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/whatsapp-native-bulk-onboarding">Bulk User Onboarding to WhatsApp Native</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs-as-code-jane/how-to/whatsapp-official-account-inbound-flow">Onboard a client profile with a WhatsApp official account pool (inbound flow)</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/docs-as-code-jane/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Onboard a client profile with a WhatsApp official account pool (inbound flow)</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Onboard a client profile with a WhatsApp official account pool (inbound flow)</h1></header>
+<p>From LeapXpert version 2.4.1 onwards, we have supported the MCP mode for client profile onboarding with a WhatsApp official account pool. This flow is different from <strong>Onboard a prospect with a WhatsApp official account pool</strong>.</p>
+<p>This article provides a detailed instruction to help you onboard a client profile to the WhatsApp official account pool (also known as the inbound flow).</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="before-you-start">Before you start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before you start" title="Direct link to Before you start">​</a></h2>
+<ul>
+<li>The company needs to contact LeapXpert to comprehensively configure this inbound flow.</li>
+<li>Your company admin has configured a WhatsApp official account pool.</li>
+<li>The admin has enabled this feature configuration: <strong>Auto promotion of NVC (non-verified client)</strong>. However, currently we don&#x27;t use the NVC term, instead, we refer to this as <em>&quot;client profile&quot;</em>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound01-df34078b0f02ddf22892c53d50ab3d94.png" width="1826" height="828" class="img_ev3q"></li>
+<li>You need to set up an extension for the user. Otherwise, you cannot generate the QR code for that user.<!-- -->
+<ul>
+<li>To set up the extension, refer to <strong>Manage extensions</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>The company provides the client following information:</p>
+<ul>
+<li>
+<p><strong>Option 1</strong>: User&#x27;s QR code.</p>
+</li>
+<li>
+<p><strong>Option 2</strong>: Official Account number &amp; Extension. If you choose option 1, there is no need to provide this information.</p>
+</li>
+<li>
+<p><strong>Official Account number</strong>: the primary WhatsApp official account number of your company. This is for clients to contact.</p>
+</li>
+<li>
+<p><strong>Extension</strong>: a unique string to identify the company employee to connect to, for example, <code>#michael</code>.</p>
+<ul>
+<li>You need to contact your company admin to follow this instruction to add an extension: <strong>Manage extensions</strong>.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> The extension is essential for both options mentioned above.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="understand-the-definition-of-primary-accounts-and-secondary-accounts">Understand the definition of primary accounts and secondary accounts<a href="#understand-the-definition-of-primary-accounts-and-secondary-accounts" class="hash-link" aria-label="Direct link to Understand the definition of primary accounts and secondary accounts" title="Direct link to Understand the definition of primary accounts and secondary accounts">​</a></h2>
+<p>For your reference, see also:</p>
+<ul>
+<li><em>Official account pools</em> (internal link)</li>
+<li><em>Onboard a prospect with a WhatsApp official account pool</em> (internal link)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="onboard-a-client-profile-to-whatsapp-official-account-pool-step-by-step-instructions">Onboard a client profile to WhatsApp official account pool: step-by-step instructions<a href="#onboard-a-client-profile-to-whatsapp-official-account-pool-step-by-step-instructions" class="hash-link" aria-label="Direct link to Onboard a client profile to WhatsApp official account pool: step-by-step instructions" title="Direct link to Onboard a client profile to WhatsApp official account pool: step-by-step instructions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-the-client-sends-a-request">1. The client sends a request<a href="#1-the-client-sends-a-request" class="hash-link" aria-label="Direct link to 1. The client sends a request" title="Direct link to 1. The client sends a request">​</a></h3>
+<p>The client sends a request by two approaches:</p>
+<ul>
+<li>Sending a message to the WhatsApp primary number with the extension.</li>
+<li>Scanning the QR code shared by the company employees (AM users).</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-system-checks-for-users">2. System checks for users<a href="#2-system-checks-for-users" class="hash-link" aria-label="Direct link to 2. System checks for users" title="Direct link to 2. System checks for users">​</a></h3>
+<ul>
+<li>If there is a user that matches the extension, search for any existing 1-1 chat rooms.</li>
+<li>If the user is not found, the system sends a <em>&quot;Not Found&quot;</em> message, and the process ends.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-check-for-existing-chat-rooms">3. Check for existing chat rooms<a href="#3-check-for-existing-chat-rooms" class="hash-link" aria-label="Direct link to 3. Check for existing chat rooms" title="Direct link to 3. Check for existing chat rooms">​</a></h3>
+<ul>
+<li>If an existing 1:1 chat room with the user is active, a reminder message is sent to that room.</li>
+<li>If no active chat room exists, the system looks for a visible client profile (CP).</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-finding-a-visible-client-profile">4. Finding a visible client profile<a href="#4-finding-a-visible-client-profile" class="hash-link" aria-label="Direct link to 4. Finding a visible client profile" title="Direct link to 4. Finding a visible client profile">​</a></h3>
+<ul>
+<li>If a CP with a phone number exists and there is only 1 client profile assigned to the user, the system checks if any secondary phone number is available.</li>
+<li>If there are many client profiles, the system picks 1 client profile randomly.</li>
+<li>If no CP is found, the system creates a new client profile.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-secondary-number-checking">5. Secondary number checking<a href="#5-secondary-number-checking" class="hash-link" aria-label="Direct link to 5. Secondary number checking" title="Direct link to 5. Secondary number checking">​</a></h3>
+<ul>
+<li>If a secondary number is available, a chat room is created, and an invitation is sent.</li>
+<li>If a secondary number is unavailable, an error message is sent via the Primary number.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-complete">6. Complete<a href="#6-complete" class="hash-link" aria-label="Direct link to 6. Complete" title="Direct link to 6. Complete">​</a></h3>
+<ul>
+<li>A message with user info is sent.</li>
+<li>The process ends with a user assigned to the client profile, and a chat room is activated.<br>
+<img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound02-c552e809b06bfe0e82d24c972033e4c6.png" width="1036" height="1046" class="img_ev3q"></li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="special-cases">Special cases<a href="#special-cases" class="hash-link" aria-label="Direct link to Special cases" title="Direct link to Special cases">​</a></h3>
+<ul>
+<li>If the client enters a text <strong>without the extension</strong>, they will receive an automatic reply. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound03-43fab2a5691ab1def16d016e872115dd.png" width="992" height="666" class="img_ev3q"></li>
+<li>If the client enters the <strong>incorrect extension</strong>, they will receive an error message. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound04-0193824422016d7b839f3ac60eee5fe6.png" width="684" height="368" class="img_ev3q"></li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="share-the-qr-code-with-the-client-for-am-users">Share the QR code with the client (for AM users)<a href="#share-the-qr-code-with-the-client-for-am-users" class="hash-link" aria-label="Direct link to Share the QR code with the client (for AM users)" title="Direct link to Share the QR code with the client (for AM users)">​</a></h2>
+<p>AM users refer to this section to know how to share the QR code with the client via <strong>Leap Work web</strong>, <strong>Leap Work mobile</strong>, and <strong>Leap Work for Teams</strong>.</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-leap-work-web">1. Leap Work web<a href="#1-leap-work-web" class="hash-link" aria-label="Direct link to 1. Leap Work web" title="Direct link to 1. Leap Work web">​</a></h3>
+<p>To get the QR code on Leap Work web, do as follows:</p>
+<ol>
+<li>Sign in to the <strong>Leap Work web</strong>, go to <strong>Profile</strong>, and click the <strong>QR code icon</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound05-16d940945323d650a1d8515240a5efa9.png" width="1002" height="642" class="img_ev3q"></li>
+<li>The client uses WhatsApp to scan the QR code to initiate the conversation with the user. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound06-ca4ea4e3731cda6604c736a6841c80aa.png" width="986" height="638" class="img_ev3q"></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+<ul>
+<li>If you haven&#x27;t had an extension, you cannot get the QR code. Please contact your company admin to follow this instruction to add an extension.</li>
+</ul>
+</blockquote>
+<ul>
+<li>Once the QR code appears, share it with a client.</li>
+<li>The client uses WhatsApp to scan the QR code to start the conversation with the user. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound07-021b633dc5359cadef36ca83ae811beb.png" width="578" height="1056" class="img_ev3q">
+<ul>
+<li>If there is no extension, the user cannot see the QR code on Leap Work.</li>
+<li>If there is an issue with the WhatsApp Business Account, you will see the following screen:  <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound08-e6f6967bc1b6ab746918eb287f943a17.png" width="986" height="636" class="img_ev3q"></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-leap-work-mobile">2. Leap Work mobile<a href="#2-leap-work-mobile" class="hash-link" aria-label="Direct link to 2. Leap Work mobile" title="Direct link to 2. Leap Work mobile">​</a></h3>
+<p>To get the QR code on Leap Work mobile, do as follows:</p>
+<ol>
+<li>Sign in to the <strong>Leap Work mobile</strong>, go to the <strong>profile screen</strong>, and click the <strong>QR code</strong>.  <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound09-9d135a95a391aedb44f713028147fa20.png" width="590" height="1134" class="img_ev3q"></li>
+<li>Once the QR code appears, share it with a client. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound10-6a00f7856806178e2b96dcbd067611d5.png" width="594" height="1064" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound11-ae3e0fac15ea92c08489b2b8a76523f8.png" width="588" height="1064" class="img_ev3q"></li>
+<li>The client uses WhatsApp to scan the QR code to start the conversation with the User.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+<ul>
+<li>If there is no extension, the user cannot see the QR code on Leap Work mobile.</li>
+<li>If there is an issue with the WhatsApp Business Account, you will see the following screen.</li>
+</ul>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="alt-text"><img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound12-5d21685ed0e5bc4e3d760d70002607f2.png" width="584" height="1064" class="img_ev3q"><a href="#alt-text" class="hash-link" aria-label="Direct link to alt-text" title="Direct link to alt-text">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-leap-work-for-teams">3. Leap Work for Teams<a href="#3-leap-work-for-teams" class="hash-link" aria-label="Direct link to 3. Leap Work for Teams" title="Direct link to 3. Leap Work for Teams">​</a></h3>
+<p>To get the QR code on Leap Work for Teams, do as follows:</p>
+<ol>
+<li>Sign in to the <strong>Leap Work for Teams</strong>, go to <strong>Profile</strong>, and click the <strong>QR code</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound13-d9feda9061fe018326465f6d9e8b6bdc.png" width="1096" height="706" class="img_ev3q"></li>
+<li>Once the QR code appears, share it with a client.<br>
+<img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound14-81f11dacdf0e2fa5de6aab588b35466d.png" width="1094" height="708" class="img_ev3q"></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong></p>
+<ul>
+<li>If there is no extension, the user cannot see the QR code on Leap Work.</li>
+<li>If there is an issue with the WhatsApp Business Account, you will see the following screen.</li>
+</ul>
+</blockquote>
+<p><img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/inbound15-79b6a54e3f82599ccfeb56011577a5af.png" width="1102" height="708" class="img_ev3q"></p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs-as-code-jane/how-to/whatsapp-native-bulk-onboarding"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Bulk User Onboarding to WhatsApp Native</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before you start</a></li><li><a href="#understand-the-definition-of-primary-accounts-and-secondary-accounts" class="table-of-contents__link toc-highlight">Understand the definition of primary accounts and secondary accounts</a></li><li><a href="#onboard-a-client-profile-to-whatsapp-official-account-pool-step-by-step-instructions" class="table-of-contents__link toc-highlight">Onboard a client profile to WhatsApp official account pool: step-by-step instructions</a><ul><li><a href="#1-the-client-sends-a-request" class="table-of-contents__link toc-highlight">1. The client sends a request</a></li><li><a href="#2-system-checks-for-users" class="table-of-contents__link toc-highlight">2. System checks for users</a></li><li><a href="#3-check-for-existing-chat-rooms" class="table-of-contents__link toc-highlight">3. Check for existing chat rooms</a></li><li><a href="#4-finding-a-visible-client-profile" class="table-of-contents__link toc-highlight">4. Finding a visible client profile</a></li><li><a href="#5-secondary-number-checking" class="table-of-contents__link toc-highlight">5. Secondary number checking</a></li><li><a href="#6-complete" class="table-of-contents__link toc-highlight">6. Complete</a></li><li><a href="#special-cases" class="table-of-contents__link toc-highlight">Special cases</a></li></ul></li><li><a href="#share-the-qr-code-with-the-client-for-am-users" class="table-of-contents__link toc-highlight">Share the QR code with the client (for AM users)</a><ul><li><a href="#1-leap-work-web" class="table-of-contents__link toc-highlight">1. Leap Work web</a></li><li><a href="#2-leap-work-mobile" class="table-of-contents__link toc-highlight">2. Leap Work mobile</a></li></ul></li><li><a href="#alt-text" class="table-of-contents__link toc-highlight">Alt text</a><ul><li><a href="#3-leap-work-for-teams" class="table-of-contents__link toc-highlight">3. Leap Work for Teams</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Jane's Writing Portfolio. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

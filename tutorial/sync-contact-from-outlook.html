@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-tutorial docs-version-current docs-doc-page docs-doc-id-sync-contact-from-outlook" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Sync Contacts from Outlook | Jane Thao Nguyen</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" property="og:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" property="og:url" content="https://janengpersonal.github.io/docs-as-code-jane/"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="twitter:title" content="Jane Thao Nguyen | Docs-as-Code Portfolio"><meta data-rh="true" name="twitter:description" content="Technical Writer &amp; Content Designer – Documentation, tutorials, and guides."><meta data-rh="true" name="twitter:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-tutorial-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-tutorial-current"><meta data-rh="true" property="og:title" content="Sync Contacts from Outlook | Jane Thao Nguyen"><meta data-rh="true" name="description" content="LeapXpert introduces the Microsoft Outlook contact import to help companies reduce redundant efforts when trying"><meta data-rh="true" property="og:description" content="LeapXpert introduces the Microsoft Outlook contact import to help companies reduce redundant efforts when trying"><link data-rh="true" rel="icon" href="/docs-as-code-jane/img/favicon-jane.png"><link data-rh="true" rel="canonical" href="https://janengpersonal.github.io/docs-as-code-jane/tutorial/sync-contact-from-outlook"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/tutorial/sync-contact-from-outlook" hreflang="en"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/tutorial/sync-contact-from-outlook" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Sync Contacts from Outlook","item":"https://janengpersonal.github.io/docs-as-code-jane/tutorial/sync-contact-from-outlook"}]}</script><link rel="stylesheet" href="/docs-as-code-jane/assets/css/styles.41e53a8f.css">
+<script src="/docs-as-code-jane/assets/js/runtime~main.59f3650c.js" defer="defer"></script>
+<script src="/docs-as-code-jane/assets/js/main.68972885.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/docs-as-code-jane/img/favicon-jane.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs-as-code-jane/"><div class="navbar__logo"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Jane&#x27;s Documentation</b></a><a class="navbar__item navbar__link" href="/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault">How-to</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/tutorial/create-a-scheduled-report">Tutorial</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/explanation/about-external-companies">Explanation</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/reference/list-of-feature-configurations">Reference</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/janengpersonal" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://www.linkedin.com/in/janethaonguyen22/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/create-a-scheduled-report">Create a Scheduled Report</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/enable-automatic-replies">Enable automatic replies when Users are out of office</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs-as-code-jane/tutorial/sync-contact-from-outlook">Sync Contacts from Outlook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/usage-report-per-room-for-governed-channels">Usage report per room for Governed channels</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/wechat-miniapp-otp-restriction-onboarding-flow">Configuring Phone Number and OTP Input Restrictions in the WeChat MiniApp Onboarding Flow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/wecom-native-configure-provider-build-app">Configure Provider-built app for WeCom Native integration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/wecom-native-configure-trusted-ip-for-self-build-app">Configure Trusted IP for the Self-built app</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/docs-as-code-jane/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Sync Contacts from Outlook</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Sync Contacts from Outlook</h1></header>
+<p>LeapXpert introduces the Microsoft Outlook contact import to help companies reduce redundant efforts when trying
+to manually re-create the contacts list on LeapXpert platform.<br>
+<!-- -->This article explains how this feature works and provides a detailed instruction to help you sync and manage contact from Microsoft Outlook.</p>
+<p>For this feature, users can import the following details:</p>
+<ul>
+<li>First name &amp; Last name.</li>
+<li>Phone number.<br>
+<!-- -->Retrieve 1 value from the following priority:<!-- -->
+<ul>
+<li>Mobile phone number.</li>
+<li>If no mobile phone, use the first business phone.</li>
+<li>If no mobile phone, use the first home phone.</li>
+</ul>
+</li>
+<li>Email address. (If there are many email addresses, take the first one).</li>
+<li>ID.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="before-you-start">Before you start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before you start" title="Direct link to Before you start">​</a></h2>
+<ul>
+<li>
+<p>You are using the LeapXpert version 2.4.0 onwards.</p>
+</li>
+<li>
+<p>Your company manages contacts on Outlook.</p>
+</li>
+<li>
+<p>Ensure that you enable the following settings on the Org Admin portal: <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook1-9877166971df9cfc9f23bb668e368531.png" width="1732" height="776" class="img_ev3q"></p>
+<p>Ensure you select following permissions:</p>
+<ul>
+<li><strong>Admin -Contact Synchronization (Administrative permission)</strong> -&gt; for admins. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook2-42089e5c731db07ad559c915babeed6c.png" width="1758" height="804" class="img_ev3q"></li>
+<li><strong>Request contact sync from Outlook (Functional permissions &gt; Clients)</strong> -&gt; for AM users. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook3-465f97a62a0c5391da33d8396ba543a3.png" width="1754" height="802" class="img_ev3q"></li>
+</ul>
+</li>
+<li>
+<p>Be aware that initially LeapXpert only supports the integration for the company level, not the business unit level since different regions have different Outlook integration.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Please note that for version 2.4.0, we only support this feature for Governed clients using Microsoft Teams.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-it-works">How it works<a href="#how-it-works" class="hash-link" aria-label="Direct link to How it works" title="Direct link to How it works">​</a></h2>
+<p>LeapXpert offers two methods to sync contacts from Outlook:</p>
+<ul>
+<li><strong>Scheduled import</strong>: The user sets automatic sync hourly, every X (hours) or daily upon their preference.<!-- -->
+<blockquote>
+<p><strong>Note:</strong> LeapXpert temporarily does not support this method.</p>
+</blockquote>
+</li>
+<li><strong>Ad-hoc import</strong>: The user requests to sync when necessary.</li>
+</ul>
+<p>If allowed by the company, the user can request LeapXpert to import their own Outlook contacts at their discretion. Upon the initial import, the user needs to grant LeapXpert the permission to read their Outlook contacts. Such authorization token has an expiry, so once it is expired, the user must grant it again in their next sync request.</p>
+<p>The import logic is described as below:</p>
+<ul>
+<li>When the user imports a list of contact to LeapXpert, those contacts are considered as <strong>New Contact</strong>.</li>
+<li>When the user changes the contact&#x27;s phone number or email address, in the next import, those contacts are considered as <strong>Updated Contact</strong>.<br>
+<!-- -->Note that LeapXpert will not consider the following cases as Updated:<!-- -->
+<ul>
+<li>The previous phone number or email address is used to integrate channels.</li>
+<li>The change is an empty phone number or email address. This helps prevent the data loss.</li>
+</ul>
+</li>
+<li>When the user deletes a contact on Outlook, in the next import, those contacts are considered as <strong>Deleted Contact</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Although client profiles are deleted, they remain active on LeapXpert. We have an internal method to track those external deletion actions.</li>
+<li>Temporarily for 2.4.0 version, LeapXpert does not handle the Updated and Deleted Contact types.</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sync-contacts-from-outlook-step-by-step-guide">Sync contacts from Outlook: Step-by-step guide<a href="#sync-contacts-from-outlook-step-by-step-guide" class="hash-link" aria-label="Direct link to Sync contacts from Outlook: Step-by-step guide" title="Direct link to Sync contacts from Outlook: Step-by-step guide">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-an-azure-application-on-the-azure-admin-portal-for-admins">Create an Azure application on the Azure admin portal (For admins)<a href="#create-an-azure-application-on-the-azure-admin-portal-for-admins" class="hash-link" aria-label="Direct link to Create an Azure application on the Azure admin portal (For admins)" title="Direct link to Create an Azure application on the Azure admin portal (For admins)">​</a></h3>
+<ol>
+<li>Log in to <a href="https://portal.azure.com/" target="_blank" rel="noopener noreferrer">https://portal.azure.com/</a></li>
+<li>Search for &quot;App Registrations&quot; on the search bar</li>
+<li>Select <strong>+New Registration</strong></li>
+<li>Fill in the name and select &quot;Accounts in this organizational directory only&quot;</li>
+<li>Click <strong>Register</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook4-7d53c7df8730a2c015f21fb29cecce23.png" width="1760" height="924" class="img_ev3q"></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Do not enter Redirect URI yet.</p>
+</blockquote>
+<ol start="6">
+<li>After the app is created, go to <strong>Manage &gt; Authentication &gt; Platform configurations &gt; Add a platform &gt; Single-page application</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook5-ea982200d046a5bfaf153c85146eee52.png" width="1762" height="946" class="img_ev3q"></li>
+<li>Enter value <code>{WEB_URL}/teams-outlook-login</code> for Direct URIs.  <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook6-cc5b6cfd81ede5c6eca3951b14c3de0d.png" width="1756" height="902" class="img_ev3q"><br>
+<em>Please note that <code>{WEB_URL}</code> is the Leap Work  URL of the deployed environment. After entering the value, save the change.</em></li>
+<li>In the <strong>Manage</strong> dropdown, select <strong>API permissions</strong>.</li>
+<li>Select <strong>Microsoft Graph (1) &gt; Delegated permissions</strong>.</li>
+<li>On the Select permissions search bar, type &quot;contacts&quot;.</li>
+<li>Tick <strong>Contacts.Read</strong> and click <strong>Add permissions</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook7-33ecaca382177d47dac1ad041a0d3d84.png" width="1756" height="944" class="img_ev3q"></li>
+<li>In the <strong>Overview</strong> section, get the Application (Client ID) and Directory (tenant) ID of this application, which will be used for the next step to configure the integration with LeapXpert. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook8-5f1249597cdf348e79b2a5f1ad235b00.png" width="1758" height="946" class="img_ev3q"></li>
+</ol>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="set-up-the-integration-on-leapxpert-org-admin-portal-for-admins">Set up the integration on LeapXpert Org Admin portal (For admins)<a href="#set-up-the-integration-on-leapxpert-org-admin-portal-for-admins" class="hash-link" aria-label="Direct link to Set up the integration on LeapXpert Org Admin portal (For admins)" title="Direct link to Set up the integration on LeapXpert Org Admin portal (For admins)">​</a></h3>
+<ol>
+<li>From the Org Admin portal, go to <strong>Company Settings &gt; Contact Synchronization &gt; Outlook Integration</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook9-310f42bf151730c4df33730f04dba21a.png" width="1732" height="1140" class="img_ev3q"></li>
+<li>Click <strong>Add integration</strong></li>
+<li>Fill in the name and Application ID and Directory ID collected from the Azure admin portal. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook10-e76dd367bab0c57341bb4704e63c220a.png" width="1748" height="1112" class="img_ev3q"></li>
+<li>Click <strong>Add</strong>.</li>
+</ol>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sync-contacts-on-leap-work-for-teams-for-am-users">Sync contacts on Leap Work for Teams (For AM users)<a href="#sync-contacts-on-leap-work-for-teams-for-am-users" class="hash-link" aria-label="Direct link to Sync contacts on Leap Work for Teams (For AM users)" title="Direct link to Sync contacts on Leap Work for Teams (For AM users)">​</a></h3>
+<ol>
+<li>From Leap Work for Teams, AM users who can request ad hoc sync can see the <strong>Outlook Sync</strong> button. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook11-fe3ef5207daf83ac292bab06ae9ab5c6.png" width="1696" height="1084" class="img_ev3q"></li>
+<li>For the first sync, users need to log in with the account they use to log in Microsoft Teams. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook12-967da07b711fe8a4503fe4d1effb9542.png" width="1092" height="926" class="img_ev3q">
+<blockquote>
+<p><strong>Note:</strong> This step is to authenticate users.</p>
+</blockquote>
+</li>
+<li>There is a prompt asking you to authorize the Azure app to read Outlook contacts.</li>
+<li>Once authorized, LeapXpert starts the sync process. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook13-2f256eb1732a62a29439bf75ebf64217.png" width="1390" height="890" class="img_ev3q"></li>
+<li>After clicking the sync button, it is essential to wait for few minutes to have all contacts imported. Users can switch tab or reload the app to see newly added contacts.</li>
+</ol>
+<p>The details of a specific client profile is provided to AM users. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook14-80393a3f72d5e5809cbd2880a1af336c.png" width="1390" height="846" class="img_ev3q"></p>
+<p>You have successfully synced contacts from Outlook to Leap Work for Teams.</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sync-contacts-on-leap-work-web-for-am-users">Sync contacts on Leap Work web (For AM users)<a href="#sync-contacts-on-leap-work-web-for-am-users" class="hash-link" aria-label="Direct link to Sync contacts on Leap Work web (For AM users)" title="Direct link to Sync contacts on Leap Work web (For AM users)">​</a></h3>
+<p>From version 2.6.1 onwards, users can sync contacts from Outlook to Leap Work web and Leap Work mobile as needed (ad-hoc sync).</p>
+<p>To sync Outlook contacts to Leap Work web, do as follows:</p>
+<ol>
+<li>Go to <strong>Leap Work web &gt; Contacts</strong>.</li>
+<li>Click the <strong>Sync</strong> button. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook15-46a56e90b39cf076dfa33d48e54909d1.png" width="1454" height="792" class="img_ev3q"></li>
+<li>Once the sync process is done, you will receive a notification about a total number of contacts synced. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/outlook16-49aea926299c1fd0ce90ccacd5bacaae.png" width="1446" height="814" class="img_ev3q"></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> If this is your first time syncing, all contacts will be imported. For later syncs, only contacts that have been added or updated since the last sync to when you click the button will be retrieved.</p>
+</blockquote>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sync-contacts-on-leap-work-mobile-for-am-users">Sync contacts on Leap Work mobile (For AM users)<a href="#sync-contacts-on-leap-work-mobile-for-am-users" class="hash-link" aria-label="Direct link to Sync contacts on Leap Work mobile (For AM users)" title="Direct link to Sync contacts on Leap Work mobile (For AM users)">​</a></h3>
+<p>To sync Outlook contacts to Leap Work web, do as follows:</p>
+<ol>
+<li>Go to <strong>Leap Work mobile &gt; Contacts</strong>.</li>
+<li>Click the <strong>Sync</strong> button.</li>
+<li>Once the sync process is done, you will receive a notification about a total number of contacts synced.</li>
+</ol></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs-as-code-jane/tutorial/enable-automatic-replies"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Enable automatic replies when Users are out of office</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs-as-code-jane/tutorial/usage-report-per-room-for-governed-channels"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Usage report per room for Governed channels</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before you start</a></li><li><a href="#how-it-works" class="table-of-contents__link toc-highlight">How it works</a></li><li><a href="#sync-contacts-from-outlook-step-by-step-guide" class="table-of-contents__link toc-highlight">Sync contacts from Outlook: Step-by-step guide</a><ul><li><a href="#create-an-azure-application-on-the-azure-admin-portal-for-admins" class="table-of-contents__link toc-highlight">Create an Azure application on the Azure admin portal (For admins)</a></li><li><a href="#set-up-the-integration-on-leapxpert-org-admin-portal-for-admins" class="table-of-contents__link toc-highlight">Set up the integration on LeapXpert Org Admin portal (For admins)</a></li><li><a href="#sync-contacts-on-leap-work-for-teams-for-am-users" class="table-of-contents__link toc-highlight">Sync contacts on Leap Work for Teams (For AM users)</a></li><li><a href="#sync-contacts-on-leap-work-web-for-am-users" class="table-of-contents__link toc-highlight">Sync contacts on Leap Work web (For AM users)</a></li><li><a href="#sync-contacts-on-leap-work-mobile-for-am-users" class="table-of-contents__link toc-highlight">Sync contacts on Leap Work mobile (For AM users)</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Jane's Writing Portfolio. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

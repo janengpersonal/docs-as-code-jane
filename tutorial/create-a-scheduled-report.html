@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-tutorial docs-version-current docs-doc-page docs-doc-id-create-a-scheduled-report" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Create a Scheduled Report | Jane Thao Nguyen</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" property="og:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" property="og:url" content="https://janengpersonal.github.io/docs-as-code-jane/"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="twitter:title" content="Jane Thao Nguyen | Docs-as-Code Portfolio"><meta data-rh="true" name="twitter:description" content="Technical Writer &amp; Content Designer – Documentation, tutorials, and guides."><meta data-rh="true" name="twitter:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-tutorial-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-tutorial-current"><meta data-rh="true" property="og:title" content="Create a Scheduled Report | Jane Thao Nguyen"><meta data-rh="true" name="description" content="Scheduled Reports are .CSV files automatically sent to users via email or uploaded to an FTP server at pre-configured intervals."><meta data-rh="true" property="og:description" content="Scheduled Reports are .CSV files automatically sent to users via email or uploaded to an FTP server at pre-configured intervals."><link data-rh="true" rel="icon" href="/docs-as-code-jane/img/favicon-jane.png"><link data-rh="true" rel="canonical" href="https://janengpersonal.github.io/docs-as-code-jane/tutorial/create-a-scheduled-report"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/tutorial/create-a-scheduled-report" hreflang="en"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/tutorial/create-a-scheduled-report" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Create a Scheduled Report","item":"https://janengpersonal.github.io/docs-as-code-jane/tutorial/create-a-scheduled-report"}]}</script><link rel="stylesheet" href="/docs-as-code-jane/assets/css/styles.41e53a8f.css">
+<script src="/docs-as-code-jane/assets/js/runtime~main.59f3650c.js" defer="defer"></script>
+<script src="/docs-as-code-jane/assets/js/main.68972885.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/docs-as-code-jane/img/favicon-jane.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs-as-code-jane/"><div class="navbar__logo"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Jane&#x27;s Documentation</b></a><a class="navbar__item navbar__link" href="/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault">How-to</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/tutorial/create-a-scheduled-report">Tutorial</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/explanation/about-external-companies">Explanation</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/reference/list-of-feature-configurations">Reference</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/janengpersonal" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://www.linkedin.com/in/janethaonguyen22/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs-as-code-jane/tutorial/create-a-scheduled-report">Create a Scheduled Report</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/enable-automatic-replies">Enable automatic replies when Users are out of office</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/sync-contact-from-outlook">Sync Contacts from Outlook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/usage-report-per-room-for-governed-channels">Usage report per room for Governed channels</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/wechat-miniapp-otp-restriction-onboarding-flow">Configuring Phone Number and OTP Input Restrictions in the WeChat MiniApp Onboarding Flow</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/wecom-native-configure-provider-build-app">Configure Provider-built app for WeCom Native integration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/tutorial/wecom-native-configure-trusted-ip-for-self-build-app">Configure Trusted IP for the Self-built app</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/docs-as-code-jane/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Create a Scheduled Report</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Create a Scheduled Report</h1></header>
+<p><strong>Scheduled Reports</strong> are <code>.CSV</code> files automatically sent to users via email or uploaded to an FTP server at pre-configured intervals.<br>
+<!-- -->Unlike <strong>Dashboard reports</strong> (which typically cover data from 00:00 to 23:59), <strong>Scheduled Reports</strong> can be set to start at any time during the day.</p>
+<p>This article provides instructions on how to <strong>create, configure, and edit Scheduled Reports</strong> in the Org Admin portal, along with an overview of the available report types.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="before-you-start">Before You Start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before You Start" title="Direct link to Before You Start">​</a></h2>
+<ul>
+<li>You must be using <strong>LeapXpert version 2.2.0 onwards</strong>.</li>
+<li>The company admin must have the following permissions: <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/scheduled-report01-867d2070c4c2b325abc01cff49bfb0ce.png" width="1230" height="636" class="img_ev3q">
+<ul>
+<li>All permissions under <strong>Admin - Scheduled reports</strong>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="available-scheduled-report-types">Available Scheduled Report Types<a href="#available-scheduled-report-types" class="hash-link" aria-label="Direct link to Available Scheduled Report Types" title="Direct link to Available Scheduled Report Types">​</a></h2>
+<p>LeapXpert currently supports the following report types:</p>
+<ol>
+<li>
+<p><strong>Native channel connection status report (Health check report)</strong><br>
+<!-- -->Provides a list of all corporate phone numbers and their integration status with native channels.<br>
+<!-- -->➝ See: <em>WhatsApp Native connection status reports</em> and <em>iMessage Native connection status reports</em>. (internal link).</p>
+</li>
+<li>
+<p><strong>WhatsApp inactivity report</strong><br>
+<!-- -->Lists inactive WhatsApp accounts that might impact archiving.<br>
+<!-- -->➝ See: <em>WhatsApp Native inactivity reports</em>. (internal link).</p>
+</li>
+<li>
+<p><strong>Chat Usage report by Company</strong> <em>(no longer supported)</em></p>
+</li>
+<li>
+<p><strong>Chat Usage report by Rooms</strong><br>
+<!-- -->Shows total messages sent/received per chat room.<br>
+<!-- -->➝ See: <em>WhatsApp Native usage reports</em>, <em>iMessage Native usage reports</em>, <em>Network-based SMS Native chat usage reports</em> (internal link) (from version 2.4.1 onwards).</p>
+</li>
+<li>
+<p><strong>Chat Usage report by Users</strong><br>
+<!-- -->Shows total messages sent/received per User within a pre-configured period of time.<br>
+<!-- -->➝ See: <em>WhatsApp Native usage reports</em>, <em>iMessage Native usage reports</em>, <em>Network-based SMS Native chat usage reports</em> (internal link) (from version 2.4.1 onwards).</p>
+</li>
+<li>
+<p><strong>Communication Compliance report</strong><br>
+<!-- -->Provides a daily summary of Data Leakage Prevention (DLP) violations and Room Condition violations.<br>
+<!-- -->➝ See: <em>Communication compliance reports</em>. (internal link).</p>
+</li>
+<li>
+<p><strong>WhatsApp and iMessage Native Irregularities report</strong><br>
+<!-- -->Summarizes events that cause native channels to stop archiving.<br>
+<!-- -->➝ See: <em>WhatsApp Native irregularities reports</em>, <em>iMessage Native irregularities reports</em>. (internal link).</p>
+</li>
+<li>
+<p><strong>WeCom Native Irregularities report</strong><br>
+<!-- -->Summarizes irregular communication events in WeCom rooms, such as:</p>
+<ul>
+<li>Unusual client statuses</li>
+<li>Anonymous contacts detected in the chat room.</li>
+<li>Group messages will not be archived as selected by the client.
+➝ See: <em>WeCom Native irregularities reports</em> (internal link).
+<em>(From version 2.6.0 onwards, filterable per Org Unit)</em></li>
+</ul>
+</li>
+<li>
+<p><strong>Archiving Export Email Summary report</strong><br>
+<!-- -->Summarizes archiving export emails sent to the archival system within a pre-configured period of time. The report includes the total number of emails sent, along with a .csv file containing detailed information about each exported email.
+➝ See: <em>Export task email summary reports (SMTP protocol)</em> (internal link).</p>
+</li>
+<li>
+<p><strong>Room Metadata report</strong><br>
+<!-- -->Provides details of all governed chat rooms.<br>
+<!-- -->➝ See: <em>Chat rooms metadata Scheduled Report</em> (internal link).</p>
+</li>
+</ol>
+<blockquote>
+<p>Notes</p>
+<ul>
+<li>Not all reports are configurable via the Org Admin portal. Contact <strong>Customer Support</strong> if you don’t see a required type.</li>
+<li>From <strong>version 2.3.2 onwards</strong>, multiple schedules per report type are supported.</li>
+<li>A company can have up to <strong>100 active scheduled report tasks</strong>.</li>
+</ul>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="available-intervals">Available Intervals<a href="#available-intervals" class="hash-link" aria-label="Direct link to Available Intervals" title="Direct link to Available Intervals">​</a></h2>
+<p>The table below explains how Scheduled Reports operate depending on configuration:</p>
+<table><thead><tr><th><strong>Option</strong></th><th><strong>Allowed Values</strong></th><th><strong>How it Works</strong></th><th><strong>Example</strong></th></tr></thead><tbody><tr><td>Every day at <code>hh:mm</code></td><td>Any time</td><td>Runs once daily at the set time.</td><td>Daily at 06:30 → Report covers data from 06:30 yesterday to 06:30 today.</td></tr><tr><td>Every X hours starting at <code>hh:mm</code></td><td>1, 2, 3, 4, 6, 12</td><td>Repeats daily at set intervals.</td><td>Every 4 hours starting at 06:30 → Reports at 06:30, 10:30, 14:30, 18:30.</td></tr><tr><td>Every week on weekday at <code>hh:mm</code></td><td>Mon–Sun</td><td>Runs weekly at the set day/time.</td><td>Every Monday at 06:30 → Covers data from 06:30 last Monday to 06:30 this Monday.</td></tr><tr><td>Every X months on day <code>dd</code> at <code>hh:mm</code></td><td>1–28</td><td>Runs monthly at the chosen date/time.</td><td>Every 3 months on 1st at 06:30 → Runs on Feb 1, May 1, Aug 1, Nov 1.</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="create-a-scheduled-report-1">Create a Scheduled Report<a href="#create-a-scheduled-report-1" class="hash-link" aria-label="Direct link to Create a Scheduled Report" title="Direct link to Create a Scheduled Report">​</a></h2>
+<p>To configure a scheduled email/FTP report:</p>
+<ol>
+<li>Sign in to the <strong>Organization Admin</strong>.</li>
+<li>Navigate to <strong>Provisioning &gt; Alerts &amp; Reports &gt; Scheduled Reports</strong>.</li>
+<li>Select <strong>Create Scheduled Report</strong>.</li>
+<li>The <strong>Create Scheduled Report</strong> dialog opens.</li>
+</ol>
+<blockquote>
+<p>From version <strong>2.4.1 onwards</strong>, the <em>Activated toggle</em> defaults to <strong>ON</strong> (no need to enable manually).</p>
+</blockquote>
+<ol start="5">
+<li>
+<p>In the <strong>Schedule report</strong> tab, configure: <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/scheduled-report02-e2e9e1dada61afc68761227ea6086bb5.png" width="1250" height="604" class="img_ev3q"></p>
+<ul>
+<li><strong>Task name</strong>: name of the task.</li>
+<li><strong>Report type</strong>: select from <a href="#available-scheduled-report-types">Available types</a>.</li>
+<li><strong>Select channels</strong>: choose channels to extract data.</li>
+<li><strong>Select the schedule</strong>: configure intervals (see <a href="#available-intervals">Available intervals</a>).<img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/scheduled-report03-7eee40e7d4efd18eb2303601bb4f0680.png" width="1240" height="558" class="img_ev3q"></li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Next</strong> to configure recipients.</p>
+</li>
+<li>
+<p>In the <strong>Configure recipients</strong> tab, choose methods:</p>
+<ul>
+<li><strong>Email to admin</strong>: enter recipient’s email(s). Use the trash icon to remove addresses.</li>
+<li><strong>FTP server</strong> (only for Native channel status reports): provide:<!-- -->
+<ul>
+<li>Host &amp; Port</li>
+<li>Transport: SFTP or FTP</li>
+<li>Authentication: Username/password</li>
+<li>Proxy (optional). Input credentials for the above methods for server authentication and connectivity. Disable the method that does not apply to you. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/scheduled-report04-a64cd45361f20c2d85b6014ee1c8fd61.png" width="1240" height="788" class="img_ev3q"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Enter credentials for authentication and connectivity.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<p>✅ You have successfully created a Scheduled Report.</p>
+<blockquote>
+<p>From version <strong>2.4.1</strong>, the <strong>company (tenant) name</strong> is displayed in the email content and <code>.csv</code> file.   <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/scheduled-report05-fc99475b562295b86504be134753e419.png" width="1276" height="762" class="img_ev3q"></p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="edit-a-report-schedule">Edit a Report Schedule<a href="#edit-a-report-schedule" class="hash-link" aria-label="Direct link to Edit a Report Schedule" title="Direct link to Edit a Report Schedule">​</a></h2>
+<p>⚠️ Reports in <strong>Running</strong> status cannot be edited.</p>
+<p>To edit:</p>
+<ol>
+<li>Sign in to <strong>Organization Admin</strong>.</li>
+<li>Go to <strong>Provisioning &gt; Alerts &amp; Reports &gt; Scheduled Reports</strong>.</li>
+<li>Select <strong>Edit</strong> (pencil icon) for the report.</li>
+<li>Update fields as required. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/scheduled-report06-818f61ca11f14dffe75ae3d5ff8cc930.png" width="1244" height="616" class="img_ev3q"></li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="download-and-view-reports">Download and View Reports<a href="#download-and-view-reports" class="hash-link" aria-label="Direct link to Download and View Reports" title="Direct link to Download and View Reports">​</a></h2>
+<ul>
+<li>When receiving a report email, users must log in to the Org Admin portal to download.</li>
+<li>Downloading requires appropriate <strong>permissions</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/scheduled-report07-f8841012a228e2b45490674ea4715118.png" width="1242" height="786" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/scheduled-report08-01e0795d7dc2f0276cfd541c799b2c81.png" width="1234" height="792" class="img_ev3q"></li>
+<li>Without them, users will see an <strong>error message</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/scheduled-report09-89241e731940e32eccce3e5b3b898932.png" width="1230" height="790" class="img_ev3q"></li>
+<li>When we upgrade your environment to version <strong>2.3.1</strong>, a role <code>scheduled-reports.viewer</code> will be automatically created and assigned to users whose email addresses are configured as recipients of any scheduled reports. The role consists of following permissions that allow users to download reports.
+All those permissions are included in the Admin - Scheduled reports permission.</li>
+</ul>
+<table><thead><tr><th>Permission</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Download Native Channel Connection Status report</td><td>ADMINISTRATIVE</td><td>Allow download Native Channel Connection Status report sent via email</td></tr><tr><td>Download inactivity report</td><td>ADMINISTRATIVE</td><td>Allow download Inactivity report sent via email</td></tr><tr><td>Download Usage By Company report</td><td>ADMINISTRATIVE</td><td>Allow download Chat Usage By Company (Metrics) report sent via email. <code>&lt;br&gt;</code> <em>Note: This report is temporarily not on the UI now.</em></td></tr><tr><td>Download Communication Compliance report</td><td>ADMINISTRATIVE</td><td>Allow download Communication Compliance report sent via email.<code>&lt;br&gt;</code> <em>Note: This report is visible on the Org Admin portal from version 2.3.2 onwards.</em></td></tr><tr><td>Download Usage by Rooms report</td><td>ADMINISTRATIVE</td><td>Allow download Chat Usage By Rooms report sent via email</td></tr><tr><td>Download Usage by Users report</td><td>ADMINISTRATIVE</td><td>Allow download Chat Usage By Users report sent via email</td></tr><tr><td>Download WeCom irregularities report</td><td>ADMINISTRATIVE</td><td>Allow download WeCom Irregularities report sent via email.<code>&lt;br&gt;</code> <em>Note: This report is temporarily not on the UI now.</em></td></tr><tr><td>Download Other Native Channel irregularities report</td><td>ADMINISTRATIVE</td><td>Allow download Other Native Channel Irregularities report sent via email</td></tr><tr><td>Download Archiving Export Email Summary report</td><td>ADMINISTRATIVE</td><td>Allow download Archiving Export Email Summary report sent via email. <code>&lt;br&gt;</code> <em>Note: From version 2.4.1 onwards, users can configure this type of report on the Org Admin portal.</em></td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="limitations">Limitations<a href="#limitations" class="hash-link" aria-label="Direct link to Limitations" title="Direct link to Limitations">​</a></h2>
+<ul>
+<li><code>scheduled-reports.viewer</code> <strong>cannot</strong> be assigned to group emails (admins must assign manually per user).</li>
+<li>If your company uses <strong>SSO</strong>, automatic role assignment may be overridden at login.<br>
+<!-- -->➝ Recommendation: create a <strong>custom role</strong> with scheduled report permissions and map roles for all recipients.</li>
+<li>Reports created <strong>before this update</strong> may need rescheduling to align with new features.</li>
+</ul>
+<hr></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--next" href="/docs-as-code-jane/tutorial/enable-automatic-replies"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Enable automatic replies when Users are out of office</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before You Start</a></li><li><a href="#available-scheduled-report-types" class="table-of-contents__link toc-highlight">Available Scheduled Report Types</a></li><li><a href="#available-intervals" class="table-of-contents__link toc-highlight">Available Intervals</a></li><li><a href="#create-a-scheduled-report-1" class="table-of-contents__link toc-highlight">Create a Scheduled Report</a></li><li><a href="#edit-a-report-schedule" class="table-of-contents__link toc-highlight">Edit a Report Schedule</a></li><li><a href="#download-and-view-reports" class="table-of-contents__link toc-highlight">Download and View Reports</a></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Jane's Writing Portfolio. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs_as_code_jane=self.webpackChunkdocs_as_code_jane||[]).push([[4797],{8535:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/docs-as-code-jane/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

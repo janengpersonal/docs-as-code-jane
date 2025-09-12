@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-how-to docs-version-current docs-doc-page docs-doc-id-imessage-native-self-onboarding" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password and Okta Verify Push authentication method) | Jane Thao Nguyen</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" property="og:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" property="og:url" content="https://janengpersonal.github.io/docs-as-code-jane/"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="twitter:title" content="Jane Thao Nguyen | Docs-as-Code Portfolio"><meta data-rh="true" name="twitter:description" content="Technical Writer &amp; Content Designer – Documentation, tutorials, and guides."><meta data-rh="true" name="twitter:image" content="https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-how-to-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-how-to-current"><meta data-rh="true" property="og:title" content="Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password and Okta Verify Push authentication method) | Jane Thao Nguyen"><meta data-rh="true" name="description" content="With LeapXpert platform, admins can send email instructions directly to assigned Users to help them self-onboard their iMessage accounts for message archiving."><meta data-rh="true" property="og:description" content="With LeapXpert platform, admins can send email instructions directly to assigned Users to help them self-onboard their iMessage accounts for message archiving."><link data-rh="true" rel="icon" href="/docs-as-code-jane/img/favicon-jane.png"><link data-rh="true" rel="canonical" href="https://janengpersonal.github.io/docs-as-code-jane/how-to/imessage-native-self-onboarding"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/how-to/imessage-native-self-onboarding" hreflang="en"><link data-rh="true" rel="alternate" href="https://janengpersonal.github.io/docs-as-code-jane/how-to/imessage-native-self-onboarding" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password and Okta Verify Push authentication method)","item":"https://janengpersonal.github.io/docs-as-code-jane/how-to/imessage-native-self-onboarding"}]}</script><link rel="stylesheet" href="/docs-as-code-jane/assets/css/styles.41e53a8f.css">
+<script src="/docs-as-code-jane/assets/js/runtime~main.59f3650c.js" defer="defer"></script>
+<script src="/docs-as-code-jane/assets/js/main.68972885.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/docs-as-code-jane/img/favicon-jane.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs-as-code-jane/"><div class="navbar__logo"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs-as-code-jane/img/favicon-jane.png" alt="Jane&#x27;s Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Jane&#x27;s Documentation</b></a><a class="navbar__item navbar__link" href="/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault">How-to</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/tutorial/create-a-scheduled-report">Tutorial</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/explanation/about-external-companies">Explanation</a><a class="navbar__item navbar__link" href="/docs-as-code-jane/reference/list-of-feature-configurations">Reference</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/janengpersonal" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://www.linkedin.com/in/janethaonguyen22/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault">Step-by-Step Guide: BYOK Integration with Azure Key Vault</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs-as-code-jane/how-to/imessage-native-self-onboarding">Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password and Okta Verify Push authentication method)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/we-chat-client-onboarding-with-sms">Configure the client onboarding flow with SMS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/whatsapp-native-bulk-onboarding">Bulk User Onboarding to WhatsApp Native</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-as-code-jane/how-to/whatsapp-official-account-inbound-flow">Onboard a client profile with a WhatsApp official account pool (inbound flow)</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/docs-as-code-jane/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password and Okta Verify Push authentication method)</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password and Okta Verify Push authentication method)</h1></header>
+<p>With LeapXpert platform, admins can send email instructions directly to assigned Users to help them self-onboard their iMessage accounts for message archiving.<br>
+<!-- -->From version 2.3.2 onwards, users who use Managed Apple ID federated with Okta can self-onboard iMessage accounts. Users can verify their accounts with two authentication methods:</p>
+<ul>
+<li>Password only</li>
+<li>Password and Okta Verify - Push notification</li>
+</ul>
+<p>This guide explains how to self-onboard with Okta using email, password, without the need to use Okta Verify app.<br>
+<!-- -->For self-onboarding with Okta using email, and password only, see <strong>Self-Onboarding iMessage Native for Managed Apple ID with Okta (Email and Password Only authentication method)</strong> (internal link).</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Admins cannot access the Mac that has been issued to users for self-onboarding.</li>
+<li>Admins can no longer activate iMessage native on behalf of users who are assigned to self-onboard. To learn more about onboarding iMessage Native on-behalf of users, see: <em>Configure iMessage Native integration in Organization Admin on the OS level.</em></li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="before-you-start">Before you start<a href="#before-you-start" class="hash-link" aria-label="Direct link to Before you start" title="Direct link to Before you start">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="for-admins">For admins<a href="#for-admins" class="hash-link" aria-label="Direct link to For admins" title="Direct link to For admins">​</a></h3>
+<ul>
+<li>Ensure the Managed Apple ID login authentication methods are supported.</li>
+<li>Have following permissions:<!-- -->
+<ul>
+<li>View list of corporate phone number provisionings.</li>
+<li>Edit corporate phone number provisioning.</li>
+<li>Activate user’s messaging identities (AM users &amp; admins).</li>
+<li>Deactivate user’s messaging identity (AM users &amp; admins).</li>
+</ul>
+</li>
+<li>Request Mac machines set up exclusively for self-onboarding.</li>
+<li>Enable iMessage Native self-onboarding on the Org Admin portal (<code>Company Settings &gt; Feature Configurations &gt; com.leapxpert.imessage_native.self-onboarding</code>).</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="for-am-users">For AM users<a href="#for-am-users" class="hash-link" aria-label="Direct link to For AM users" title="Direct link to For AM users">​</a></h3>
+<ul>
+<li>Double-check Apple ID details.</li>
+<li>Set up iCloud for Messages, Keychain and Contacts. For more information, check <em>Prepare your iPhone and iMessage account: A step-by-step guide</em>.</li>
+<li>Use desktop browser for self-onboarding (highly recommended). <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn01-647acf6ad3c96141f8a997b779052e6d.png" width="1234" height="536" class="img_ev3q"></li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Those practices ensure a frictionless self-onboarding process.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="send-email-instructions-to-imessage-users-for-admins">Send email instructions to iMessage users (For admins)<a href="#send-email-instructions-to-imessage-users-for-admins" class="hash-link" aria-label="Direct link to Send email instructions to iMessage users (For admins)" title="Direct link to Send email instructions to iMessage users (For admins)">​</a></h2>
+<p>To send email instructions to iMessage Users, do as follows:</p>
+<ol>
+<li>Sign in to the Organization Admin portal.</li>
+<li>Go to <strong>Channels &gt; Corporate Phone Number</strong>.</li>
+<li>Click <strong>Add Phone Number</strong>. In the <em>Create Corporate Phone Number Provisioning</em> dialog, fill in the following information:<!-- -->
+<ul>
+<li><strong>Phone Number:</strong> input a phone number.</li>
+<li><strong>Provisioned User:</strong> search for the company employee&#x27;s username to whom you want to assign the input phone number.</li>
+</ul>
+</li>
+<li>Once done, click <strong>Save</strong>. A new corporate phone number is created.</li>
+<li>In the newly created corporate phone number, select <strong>View Integrations</strong>.</li>
+<li>In the <em>Corporate Phone Number Integration</em> dialog, select <strong>Email Instruction</strong> in iOS SMS &amp; iMessage Native to start the integration.</li>
+<li>A confirmation dialog opens. Make sure the email is correct, then click <strong>Send email</strong>.</li>
+</ol>
+<p>You have successfully sent an instruction email to users. The email instruction contains a link that allows users to onboard themselves in iMessage Native.</p>
+<p><strong>Note:</strong> The link typically expires two days after the email is sent.</p>
+<p>You can configure different variables of the invitation email template:</p>
+<ul>
+<li><strong>Company name:</strong> retrieve from the company&#x27;s display name. You can configure the company name in the invitation email by editing the Display Name in the company profile. See: <em>Edit the company profile information</em>.</li>
+<li><strong>Signature logo:</strong> retrieve from the company&#x27;s primary logo. You can configure the company name in the invitation email by editing the Primary logo in the company profile.  See: <em>Edit the company logo</em>.</li>
+</ul>
+<p>To customize the invitation email template, contact the LeapXpert support team for further assistance.</p>
+<p>Once the user has successfully linked their iMessage account, you can see the iMessage linked status in the Organization Admin.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="self-onboarding-process-for-am-users">Self-onboarding process (for AM users)<a href="#self-onboarding-process-for-am-users" class="hash-link" aria-label="Direct link to Self-onboarding process (for AM users)" title="Direct link to Self-onboarding process (for AM users)">​</a></h2>
+<ol>
+<li>Sign in to iMessage with your Apple account.</li>
+<li>Once received the email instruction (screenshot), click <strong>Preparations before linking iMessage account</strong> to access a guide for next steps.<img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn02-c3e607907d14d242fcc163f2471ce25f.png" width="1242" height="842" class="img_ev3q"></li>
+<li>Once the users have gone through the information on this page, close it and get back to the instruction email.</li>
+<li>Click <strong>Link Your iMessage Account</strong> button to get started.</li>
+<li>Enter the 6-digit code sent to the above phone number via SMS to verify your phone number.<img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn03-e7db81a18c7a51836f08827de4be499a.png" width="1178" height="776" class="img_ev3q"></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> From the version 2.3.0 onwards, users can receive OTP via email. To enable sending OTP via email, admins go to <code>Company Settings &gt; Feature Configurations &gt; Native Channels</code>. Search for the <em>&quot;Authentication method for iMessage Native: AM self-onboarding&quot;</em>, select <strong>Edit</strong>, choose <strong>Send OTP via Email</strong> from the dropdown list. Click <strong>Save</strong>.</p>
+</blockquote>
+<ol start="6">
+<li>Select <strong>Log in via SSO</strong> to authenticate your account if your company has enabled SSO authentication. To enable the SSO authentication, see <em>Enable SSO authentication for iMessage Native self-onboarding</em> (internal link). <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn04-bf010ee1c52122d2eebe0265c00a7ca4.png" width="1204" height="602" class="img_ev3q"></li>
+<li>Enter the Apple ID credentials to your iMessage account. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn05-771e091db5b68f31084771867aa3e4fe.png" width="1088" height="794" class="img_ev3q"></li>
+<li>After successfully submitting your Apple ID email and password, check your Okta Verify app and <strong>Approve</strong> the login request. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn06-9a47c9e02ba70dd4847afed5558e5fdd.png" width="1124" height="790" class="img_ev3q"></li>
+<li>You will be asked for your Apple device unlock passcode as part of the Apple safety protections. Enter the passcode and complete this process. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn07-94be7e70db30f023f03b3b3c5cf27ae6.png" width="1186" height="794" class="img_ev3q"></li>
+<li>Wait for a few minutes so that we can complete the setup on LeapXpert archiving device.</li>
+<li>You will be prompted to <strong>Turn on Text Message Forwarding</strong> for LeapXpert archiving device. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn08-d2ec84fb97c5bf48072ceaecfbdcda39.png" width="1206" height="802" class="img_ev3q"></li>
+</ol>
+<blockquote>
+<p>From LeapXpert version 2.6.0 onwards, the <strong>Complete</strong> button can be disabled in a specified period of time based on the configuration.</p>
+<ul>
+<li>To configure this, admins go to <code>Company Settings &gt; Feature Configurations</code> &gt; search <em>&quot;Set countdown timer for the Complete button&quot;</em>. The acceptable value range is from 0 to 90 (seconds).</li>
+</ul>
+</blockquote>
+<p><img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn09-727c30f8826acd79e6c353e52769560b.png" width="1172" height="786" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn10-4d784da2b64e771ef83561e28a2c9fc0.png" width="1238" height="622" class="img_ev3q"></p>
+<ol start="12">
+<li>
+<p>At this step, on your own device, you encounter the <em>&quot;Device Added to Your Account&quot;</em> popup.  <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn11-4dcb3dc94651cbbda2e1337b367eb151.png" width="1126" height="918" class="img_ev3q"></p>
+<ul>
+<li>This is Apple safety feature when your account is used on other devices. Tap <strong>OK</strong> to dismiss this popup.</li>
+<li>If you want to understand more about this Apple mechanism, tap <strong>Settings</strong> to review the list of signed in devices. For more information, see also <a href="https://support.apple.com/en-vn/102649" target="_blank" rel="noopener noreferrer"><em>Check your Apple Account device list to find where you&#x27;re signed in</em></a>.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Do not remove the LeapXpert archiving machine from the list since it will unlink you from the iMessage Native. You need to integrate again to resume the message archiving.</p>
+</blockquote>
+</li>
+<li>
+<p>Below screenshots will show you how to enable <strong>Text Message Forwarding</strong> for LeapXpert capturing device from your iPhone:  <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn12-3bc278c864c237d89c0c4041f485257c.png" width="1144" height="750" class="img_ev3q"></p>
+<blockquote>
+<p><strong>Note:</strong> If you&#x27;re not seeing Text Message Forwarding option, try turning off the iMessage toggle and then turning it back on again. Wait for a few seconds for Apple to reactivate iMessage, and the Text Message Forwarding option should appear.</p>
+</blockquote>
+</li>
+<li>
+<p>Apple will ask for a 6-digit code to confirm this action: <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn13-082168ca0b2db08c2c752d2bf3de0731.png" width="1106" height="874" class="img_ev3q"></p>
+</li>
+</ol>
+<ul>
+<li>
+<p>In less than a minute, you will see the code on the self-onboarding webpage as following. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn14-d414bd09384ce18b8a46ef1569ef795e.png" width="1186" height="1030" class="img_ev3q"></p>
+</li>
+<li>
+<p>As soon as you see the code, enter it on your iPhone and tap <strong>Allow</strong> to complete this action.</p>
+</li>
+<li>
+<p>It may take you a few minutes to see the code. If you don&#x27;t see the code after 1 minute, tap <strong>Cancel</strong> on your iPhone and try to enable Text Message Forwarding again.</p>
+</li>
+<li>
+<p>After you&#x27;ve enabled Text Message Forwarding for the LeapXpert capturing device, click the <strong>Complete</strong> button on the self-onboarding webpage to finish linking your iMessage account. This will let us know you&#x27;ve completed the necessary steps and allow us to prepare for the next user who needs to link their iMessage account.</p>
+</li>
+<li>
+<p>If you do not receive the 6-digit code, from version 2.4.0 onwards, we allow users to enable Text Message Forwarding after self-onboarding. For more details, see <em>Enable Text Message Forwarding after an unsuccessful attempt to onboard to iMessage Native</em> (internal link).</p>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="unlink-imessage-users">Unlink iMessage users<a href="#unlink-imessage-users" class="hash-link" aria-label="Direct link to Unlink iMessage users" title="Direct link to Unlink iMessage users">​</a></h2>
+<p>The admin can proactively unlink iMessage users in Organization Admin.</p>
+<p>To unlink the corporate phone number for iMessage users, do as follows:</p>
+<ol>
+<li>Sign in to the Organization Admin portal.</li>
+<li>Go to <strong>Channels &gt; Corporate Phone Number</strong>.</li>
+<li>Click <strong>View integrations</strong> at the corporate phone number you want to unlink iMessage Native integration.</li>
+<li>The <em>Corporate Phone Number Integration</em> dialog opens, click <strong>Unlink</strong>. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn15-b2e838e511e7d3564a375856c8807fc1.png" width="1236" height="790" class="img_ev3q"></li>
+<li>The <em>Unlink iOS SMS and iMessage native</em> dialog opens, click <strong>Unlink</strong> to confirm the deactivating process.</li>
+</ol>
+<p>From LeapXpert version 2.1.0 onwards, you can unlink iMessage in two ways:</p>
+<ul>
+<li><strong>Safe Unlink:</strong> To fully capture the pending messages, it may take up to 3 rotations to safely unlink the selected corporate phone number.</li>
+<li><strong>Fast Unlink:</strong> Upon clicking Unlink, the system implements immediate unlink for the selected corporate phone number. After unlinking, please wait at least 10 minutes before trying to re-link iMessage channel.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Pending unlink request cannot be canceled.</p>
+</blockquote>
+<p>Upon receiving the unlink request, the system will proceed to perform the unlink for the selected Corporate Phone Number. Once done, the iMessage integration status is marked <em>Unlink by admin</em> on both the Corporate Phone Number page and Health check report.</p>
+<p>From User&#x27;s iPhone:</p>
+<ul>
+<li>Open <strong>Settings &gt; Apple ID</strong>.</li>
+<li>Scroll down to the bottom of Apple ID settings, and select LeapXpert capturing device.</li>
+<li>Tap <strong>Remove from Account</strong> to remove LeapXpert capturing device from the Apple ID account. <img decoding="async" loading="lazy" alt="Alt text" src="/docs-as-code-jane/assets/images/imn16-912aac6265dd2ad603aed4e3b44a8e8b.png" width="1214" height="494" class="img_ev3q"></li>
+</ul>
+<p>From version 2.4.0 onwards, the system will automatically conduct the clean up process. For other versions, you need to submit a ticket for the LeapXpert team to wipe data on the capturing device.</p>
+<blockquote>
+<p><strong>Note:</strong> Instead of submitting a ticket for every unlinked users, admins can gather the information to submit a list of multiple unlinked users that need to be cleaned.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="limitation">Limitation<a href="#limitation" class="hash-link" aria-label="Direct link to Limitation" title="Direct link to Limitation">​</a></h2>
+<p>If an unlink from agent event occurs during the safe unlink process, the unlink status will be marked as <em>Schedule Unlink</em> with the <em>Unlink from Agent</em> unlink reason on both the Corporate Phone Number page and the Health check report. For more information about the unlink behavior, see <em>iMessage Self-onboarding - Most encountered issues and resolutions</em> (internal link).</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs-as-code-jane/how-to/byok-integration-with-azure-key-vault"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Step-by-Step Guide: BYOK Integration with Azure Key Vault</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs-as-code-jane/how-to/we-chat-client-onboarding-with-sms"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Configure the client onboarding flow with SMS</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#before-you-start" class="table-of-contents__link toc-highlight">Before you start</a><ul><li><a href="#for-admins" class="table-of-contents__link toc-highlight">For admins</a></li><li><a href="#for-am-users" class="table-of-contents__link toc-highlight">For AM users</a></li></ul></li><li><a href="#send-email-instructions-to-imessage-users-for-admins" class="table-of-contents__link toc-highlight">Send email instructions to iMessage users (For admins)</a></li><li><a href="#self-onboarding-process-for-am-users" class="table-of-contents__link toc-highlight">Self-onboarding process (for AM users)</a></li><li><a href="#unlink-imessage-users" class="table-of-contents__link toc-highlight">Unlink iMessage users</a></li><li><a href="#limitation" class="table-of-contents__link toc-highlight">Limitation</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Jane's Writing Portfolio. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
