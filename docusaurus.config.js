@@ -24,7 +24,6 @@ const config = {
     locales: ['en'],
   },
 
-  // Disable default docs/blog presets, use custom docs plugins
   presets: [
     [
       'classic',
@@ -78,7 +77,18 @@ const config = {
   ],
 
   themeConfig: {
-    image: 'img/jane-hero-banner02.jpg',
+    image: 'img/jane-hero-banner02.jpg', // default OG preview image
+    metadata: [
+      { name: 'description', content: 'Jane Thao Nguyen – Technical Writer & Content Designer. Documentation, tutorials, and content strategy.' },
+      { property: 'og:title', content: 'Jane Thao Nguyen | Docs-as-Code Portfolio' },
+      { property: 'og:description', content: 'Explore Jane’s technical writing, tutorials, and documentation projects.' },
+      { property: 'og:image', content: 'https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg' },
+      { property: 'og:url', content: 'https://janengpersonal.github.io/docs-as-code-jane/' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Jane Thao Nguyen | Docs-as-Code Portfolio' },
+      { name: 'twitter:description', content: 'Technical Writer & Content Designer – Documentation, tutorials, and guides.' },
+      { name: 'twitter:image', content: 'https://janengpersonal.github.io/docs-as-code-jane/img/jane-hero-banner02.jpg' },
+    ],
     navbar: {
       title: "Jane's Documentation",
       logo: {
@@ -138,4 +148,3 @@ const config = {
 };
 
 export default config;
-
